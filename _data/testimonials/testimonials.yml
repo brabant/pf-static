@@ -1,0 +1,145 @@
+---
+title: Отзывы из соцсетей
+date: 2018-11-05 17:34:44 +0000
+testimonials:
+- name: Liliana Pertenava
+  avatar: assets/uploads/1.jpg
+  text: Вышел комментарий в The Village. Запрос получен и отправлен полностью через
+    Pressfeed. Люблю быть early adopter.
+  link: https://www.facebook.com/lilian.pertenava/posts/10152926952969375
+  company: Runa Capital
+- name: Алёна Владимирская
+  avatar: assets/uploads/2.jpg
+  text: 'Крутой сервис. Счастливы все: пиарщики выполняют свой основной KPI, у журналистов
+    много экспертов.'
+  link: https://www.facebook.com/alena.vladimirskaya/posts/10204207454599487
+  company: Антирабство
+- name: Дмитрий Крюков
+  avatar: assets/uploads/3.jpg
+  text: Pressfeed.ru обещает стать прорывом в отношениях пиарщиков и журналистов и
+    облегчить жизнь и тех, и других.
+  link: https://www.facebook.com/dmkryukov/posts/815931348463330
+  company: Коммерсантъ
+- name: Ksenia Nazarova
+  avatar: assets/uploads/4.jpg
+  text: 'Решила отправить запрос на Pressfeed и получила 40 (!!!) откликов за сутки.
+    Итог: контакты, которых хватит на год вперед.'
+  link: https://www.facebook.com/nazarova.a.ksenia/posts/769943816392166
+  company: Сбербанк
+- name: Влад Коваленко
+  avatar: assets/uploads/5.jpg
+  text: Макросы и Presfeed скоро заменят всех нас.
+  link: https://www.facebook.com/yakoreva/posts/1002516023098441?comment_id=1002516916431685&comment_tracking=%7B%22tn%22%3A%22R7%22%7D
+  company: РБК
+- name: Polina Rusyaeva-Tsybizova
+  avatar: assets/uploads/6.jpg
+  text: 'Видела очередное обсуждение &laquo;Как бесплатно попасть в топовые СМИ&raquo;.
+    Пройдите по ссылке, и будет вам счастье. #pressfeed'
+  link: https://www.facebook.com/polina.rusyaeva/posts/10204615022487918
+  company: ФРИИ
+- name: Teodor Popov
+  avatar: assets/uploads/7.jpg
+  text: Возможно, лучший проект нашего цеха за 2015 год.
+  link: https://www.facebook.com/TeoPopov/posts/798027080233617
+  company: Битрикс
+- name: Ilya Grabovskiy
+  avatar: assets/uploads/8.jpg
+  text: Тоже заглядываю каждый день туда.
+  link: https://www.facebook.com/lilian.pertenava/posts/10152926952969375?comment_id=10152927911864375&comment_tracking=%7B%22tn%22%3A%22R0%22%7D
+  company: Яндекс
+- name: Gaidar Magdanurov
+  avatar: assets/uploads/9.jpg
+  text: Пример очень простого, очень полезного проекта. Журналист научился программировать,
+    чтобы его сделать.
+  link: https://twitter.com/gaidar/status/542697436851208192
+  company: Acronis
+- name: Юлия Фуколова
+  avatar: assets/uploads/10.jpg
+  text: Реальный помощник журналиста! За два дня получила 43 ответа на свой запрос.
+    Опрос пришлось закрыть пораньше.
+  link: https://www.facebook.com/permalink.php?story_fbid=823243411072849&id=100001615940529
+  company: Harvard Business Review &ndash; Россия
+- name: Kim Ekaterina
+  avatar: assets/uploads/11.jpg
+  text: Когда сервис станет платным, надо как-то уговорить директора вносить оплату.
+  link: https://www.facebook.com/bocharsky/posts/10153001807812474?comment_id=10153001847267474&comment_tracking=%7B%22tn%22%3A%22R0%22%7D
+  company: 
+- name: Яна Харина
+  avatar: assets/uploads/12.jpg
+  text: Затестила Pressfeed как журналист (как пиарщик уже использовала &ndash; вышло
+    несколько комментариев). 27 ответов!
+  link: https://www.facebook.com/Jana.Kharina/posts/851260178245624
+  company: Экспофорум
+- name: Дария Бедная
+  avatar: assets/uploads/13.jpg
+  text: Вышла первая публикация с упоминанием Radario благодаря pressfeed.ru. Через
+    пару дней выйдет еще две!
+  link: https://www.facebook.com/dafyas/posts/10205927778421404
+  company: Radario
+- name: Lada Shcherbakova
+  avatar: assets/uploads/14.jpg
+  text: За две недели я познакомилась с 5 журналистами, изучила возможности 5 изданий.
+  link: https://www.facebook.com/groups/pressuha/permalink/794172687323393/
+  company: PR & Media consultant
+- name: Михаил Акимов
+  avatar: assets/uploads/15.jpg
+  text: Отправил запрос, и буквально за сутки насыпается около 10-20 комментариев.
+    Несколько статей уже опубликовано.
+  link: https://www.facebook.com/michael.akimov/posts/10205448799758230
+  company: Rabotnik.ru
+- name: Ekaterina Ryzhkova
+  avatar: assets/uploads/16.jpg
+  text: За пару дней с Pressfeed мы успели познакомиться с редакторами ключевых для
+    нас изданий и получить публикации.
+  link: https://www.facebook.com/prsfd/posts/301489270061262
+  company: Supl.biz
+- name: Настасья Якорева
+  avatar: assets/uploads/17.jpg
+  text: В цейтноте можешь не сообразить, что именно этот пиарщик может помочь. Так
+    что полезная и удобная штука.
+  link: https://www.facebook.com/yakoreva/posts/1002516023098441
+  company: РБК
+- name: Anna Sokolova
+  avatar: assets/uploads/18.jpg
+  text: За неделю получила несколько десятков откликов от пиарщиков — ко многим я
+    сама бы не додумалась обратиться.
+  link: https://www.facebook.com/anna.sokolova.5/posts/872129559498948
+  company: The Village
+- name: Grigory Lugovoy
+  avatar: assets/uploads/19.jpg
+  text: Если вижу запрос, который не подходит мне, но знаю, кому он интересен, обязательно
+    отправляю этому человеку.
+  link: https://www.facebook.com/grigory.lugovoy/posts/10152986716439171
+  company: Biletix.ru
+- name: Alexey Khodorych
+  avatar: assets/uploads/20.jpg
+  text: Пиарщики подключаются к потоку актуальных медиазапросов и реагируют на то,
+    где им действительно есть, что предложить.
+  link: https://www.facebook.com/alexey.khodorych/posts/4801521333702
+  company: РБК
+- name: Антонина Павлова
+  avatar: assets/uploads/21.jpg
+  text: Ответы приходят очень быстро. Очень.
+  link: https://www.facebook.com/bocharsky/posts/10152990345202474?comment_id=10152990754127474&comment_tracking=%7B%22tn%22%3A%22R1%22%7D
+  company: Журнал &laquo;Генеральный директор&raquo;
+- name: Val Pertsiya
+  avatar: assets/uploads/22.jpg
+  text: Теперь каждый из вас в два клика может попасть в газету! В качестве эксперта.
+  link: https://www.facebook.com/pertsiya/posts/10152947915143594
+  company: Vitagramma
+- name: Michael Vinogradov
+  avatar: assets/uploads/23.jpg
+  text: Крошечный комментарий на Pressfeed, похоже, превратился в целое интервью.
+  link: https://www.facebook.com/mikevinogradov/posts/10205492849910186
+  company: Таксилёт
+- name: Кирилл Уютнов
+  avatar: assets/uploads/24.jpg
+  text: Мой каждый второй комментарий берется в работу. Просто материал должен быть
+    уникальным, мне кажется.
+  link: https://www.facebook.com/prsfd/posts/798068800403304?comment_id=798518267025024&reply_comment_id=844271639116353
+  company: photojourneys.ru
+- name: Yana Zadorozhnaya
+  avatar: assets/uploads/25.jpg
+  text: Бомба! Спасибо
+  link: https://www.facebook.com/groups/pressuha/permalink/791627250911270/?comment_id=792296640844331&comment_tracking=%7B%22tn%22%3A%22R%22%7D
+  company: Organic PR

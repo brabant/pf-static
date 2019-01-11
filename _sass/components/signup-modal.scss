@@ -1,0 +1,14 @@
+// signup in modal
+
+.pf-signup-modal {
+  display: none;
+  @media only screen and (min-width: 1360px) {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    position: sticky;
+    top: 80px;
+    overflow: hidden;
+    margin-bottom: 900px;
+  }
+}

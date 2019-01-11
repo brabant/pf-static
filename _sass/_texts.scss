@@ -1,0 +1,135 @@
+// Text sizes
+
+body, .t-n {
+  font-size: 1.1rem !important;
+  @include media-breakpoint-up(xl) {
+    font-size: 1rem !important;
+  }
+}
+
+.t-s {
+  font-size: .8rem !important;
+}
+
+.t-m {
+  font-size: 1.1rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.4rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 1.6rem;
+  }
+}
+
+.t-l {
+  font-size: 1.5rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 2.1rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 2.4rem;
+  }
+}
+
+.t-xl {
+  font-size: 1.8rem;
+  @include media-breakpoint-up(sm) {
+    font-size: 2.5rem;
+  }
+  @include media-breakpoint-up(xl) {
+    font-size: 3rem;
+  }
+}
+
+// Headings
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  line-height: 1.35;
+  @include media-breakpoint-up(xl) {
+    letter-spacing: 0.4px;
+  }
+}
+
+// Special font
+.ff-special {
+  font-family: Open Sans, sans-serif;
+}
+
+// Links
+
+a, .btn-link, button {
+  color: $brand-primary;
+  transition: color .15s;
+  &:hover, &:active, &:focus {
+    color: darken($brand-primary, 10%);
+    transition: color .3s;
+    outline: none;
+  }
+}
+
+header a[href^="callto:"] {
+  color: $black;
+  font-weight: 500;
+  font-size: .9rem;
+  white-space: nowrap;
+}
+
+.link-d {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.35);
+}
+
+// Decoratations
+
+.text-uppercase {
+  letter-spacing: .7px;
+}
+
+/////// NEW
+
+.pf-logo {
+  font-size: 1.1rem;
+  color: #000 !important;
+  letter-spacing: .25px;
+  font-weight: 700;
+  @include media-breakpoint-up(sm) {
+    font-size: 1.5rem;
+  }
+  &:hover {
+    color: $black !important;
+  }
+}
+
+.pf-logo-white {
+  @extend .pf-logo;
+  color: $white !important;
+  &:hover {
+    color: unset !important;
+  }
+}
+
+.btn {
+  letter-spacing: .35px;
+}
+
+.pf-text-uppercase {
+  font-size: .7rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-violet {
+  color: #4510a0;
+}
+
+// break lines
+.lines-break {
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

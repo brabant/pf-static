@@ -1,0 +1,556 @@
+// General
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Sections
+
+section:not(.pf-section) {
+  position: relative;
+  z-index: 1;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  overflow-x: hidden;
+  &:first-of-type {
+    padding-top: 5.5rem;
+    @include media-breakpoint-up(md) {
+      padding-top: 7vw;
+    }
+  }
+}
+
+.pad-y {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+// Cards
+
+.card-snow {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.equal-cards {
+  .card {
+    height: 100%;
+    .card-footer {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
+.card-cases {
+  .card-cases-image {
+    min-height: 300px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .card-cases-image-layer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: background-color .3s;
+      &.arrow-left {
+        position: relative;
+        overflow: hidden;
+        &:after {
+          content: "";
+          width: 1rem;
+          height: 1rem;
+          top: calc(300px / 2 - .5rem);
+          right: -.5rem;
+          position: absolute;
+          transform: rotate(45deg);
+          background-color: $white;
+        }
+      }
+      &.arrow-right {
+        position: relative;
+        overflow: hidden;
+        &:after {
+          content: "";
+          width: 1rem;
+          height: 1rem;
+          top: calc(300px / 2 - .5rem);
+          left: -.5rem;
+          position: absolute;
+          transform: rotate(45deg);
+          background-color: $white;
+        }
+      }
+    }
+    &:hover {
+      .card-cases-image-layer {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  .card-cases-lead {
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    max-height: 300px;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+  }
+}
+
+.card.card-marked-blue {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: 3px solid $blue;
+}
+
+.card.card-marked-dark {
+  @extend .card-marked-blue;
+  border-top: 3px solid $gray-dark;
+}
+
+.card.card-marked-yellow {
+  @extend .card-marked-blue;
+  border-top: 3px solid darken($yellow, 15%);
+}
+
+// Navs
+
+.nav-pills-sm {
+  .nav-link {
+    padding: .1rem .5rem;
+    border: 2px solid transparent;
+    &.active {
+      background-color: transparent;
+      border-color: $yellow;
+      color: $gray-dark;
+      font-weight: 500;
+    }
+  }
+}
+
+// Forms, inputs, buttons
+
+.btn-block {
+  max-width: 320px;
+}
+
+.btn-plan, .form-control-plan {
+  position: relative;
+  margin-bottom: 1.75rem;
+  display: block;
+  width: 135px;
+  margin-left: auto;
+  margin-right: auto;
+  &:after {
+    content: "Цена за месяц";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: -1.1rem;
+    display: inline-block;
+    font-weight: 400;
+    color: $gray-light;
+    @extend .f-xs;
+  }
+
+  &.btn-plan-base {
+    width: 100%;
+    min-height: 48px;
+    font-size: 1rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    letter-spacing: -.5px;
+    font-weight: 500;
+    white-space: normal;
+    &:after {
+      content: "Бесплатно";
+      top: auto;
+      bottom: -1.3rem;
+      font-weight: 600;
+      color: $black;
+      letter-spacing: initial;
+    }
+  }
+
+  &.threemonthly:after {
+    content: "3 месяца";
+  }
+  &.sixmonthly:after {
+    content: "6 месяцев";
+  }
+  &.yearly:after {
+    content: "Год";
+  }
+
+  &.yearly:before {
+    content: "Экономия 28 000 ₽";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: -1.3rem;
+    display: inline-block;
+    @extend .f-xs;
+    font-weight: 600;
+    color: $black;
+  }
+  &.yearly.yearly-x:before {
+    content: "Экономия 9900 ₽";
+  }
+  &.yearly.yearly-y:before {
+    content: "Экономия 3990 ₽";
+  }
+
+}
+
+.js-plan-price {
+  min-width: 130px;
+  will-change: transform;
+  &.isChanged {
+    animation: btnBounce .75s;
+  }
+}
+
+@keyframes btnBounce {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  40% {
+    transform: scale3d(1.05, 0.9, 1);
+  }
+
+  60% {
+    transform: scale3d(0.95, 1.1, 1);
+  }
+
+  80% {
+    transform: scale3d(1.05, 0.9, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.form-control-plan {
+  input.form-control {
+    text-align: center;
+    border: none;
+    width: 42%;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
+  }
+  &:after {
+    content: "Пользователей";
+  }
+}
+
+// Bgs
+
+.bg-special-plans {
+  position: absolute;
+  z-index: -10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $teal;
+  &.bg-white {
+    position: absolute;
+    z-index: -5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $white;
+    height: 420px;
+    @include media-breakpoint-down(sm) {
+      height: 600px;
+    }
+    @media screen and (min-width: 2200px) {
+      height: 420px;
+    }
+  }
+}
+
+.bg-special-corner {
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "Самый популярный";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    right: -50px;
+    transform: rotate(45deg);
+    background-color: $yellow;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    padding: 72px 20px 0;
+  }
+}
+
+.bg-blue-light {
+  background-color: $blue-light;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.bg-feed:after {
+  @include media-breakpoint-up(lg) {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-image: url("../img/bg-feed-1.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.bg-feed.bg-feed-2:after {
+  background-image: url("../img/bg-feed-2.svg");
+}
+
+.bg-feed.bg-feed-3:after {
+  background-image: url("../img/bg-feed-2.svg");
+  background-position: center 90%;
+}
+
+// Tables
+.table-plans {
+  thead {
+    &:nth-child(1) {
+      //color: $brand-primary;
+      th {
+        border: none;
+        font-size: $font-size-h5;
+        @extend .f-light;
+        width: 20.8333325%;
+        text-align: center;
+        &:nth-child(1) {
+          width: 16.66667%;
+          text-align: left;
+        }
+      }
+    }
+  }
+  tbody tr {
+    th {
+      padding: 0.5rem;
+      border-color: lightblue;
+      @extend .f-sm;
+      @extend .f-normal;
+      @include media-breakpoint-up(sm) {
+        padding-left: 2rem;
+      }
+      a {
+        color: $gray-dark;
+        @extend .b-link-black;
+      }
+    }
+    td {
+      color: $black;
+      text-align: center;
+      vertical-align: middle;
+      border-color: lightblue;
+      .material-icons {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
+// Tooltip
+.tooltip {
+  .tooltip-inner {
+    text-align: left;
+    @extend .shadow-md;
+  }
+}
+
+// Icons
+.icon-back {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  font-size: 2rem;
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+// Modals
+.modal-fullscreen {
+  overflow: hidden;
+
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+    .modal-content {
+      min-height: 100vh;
+      border: none;
+      border-radius: 0;
+    }
+  }
+}
+
+// Lists
+
+.li-dash {
+  position: relative;
+  padding-left: 3rem;
+  &:before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: $brand-primary;
+    font-size: 1.6rem;
+    display: inline-block;
+  }
+}
+
+.list-logos {
+  position: relative;
+  left: 0;
+  animation: flies 100s 1s infinite alternate linear;
+  will-change: transform;
+}
+
+@keyframes flies {
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+// Sliders
+.slider-pub {
+  transition: opacity 1s .5s;
+  will-change: opacity;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+  .slider-pub-item {
+    position: relative;
+    margin: 1rem 5rem 2rem auto;
+    padding-left: 1rem;
+    min-height: 525px;
+    .slider-pub-item-query {
+      width: 400px;
+      min-height: 400px;
+      opacity: 0.9;
+      padding-right: 10%;
+      transition: all .3s;
+      &:hover {
+        z-index: 10;
+        opacity: 1;
+        h5 {
+          transition: color .3s;
+          color: $white;
+        }
+      }
+    }
+    .slider-pub-item-pub {
+      position: absolute;
+      top: 130px;
+      left: 3rem;
+      width: 400px;
+      min-height: 400px;
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  position: absolute;
+  cursor: pointer;
+  background: transparent;
+  top: 41%;
+  border: none;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.slick-next {
+  right: -34px;
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slider-logos {
+  transition: opacity 1s .5s;
+  text-align: center;
+  .slick-slide {
+    img {
+      margin-left: auto;
+      margin-right: auto;
+      opacity: .3;
+      transition: opacity .3s;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.page-loaded .slider-pub,
+.page-loaded .slider-logos {
+  opacity: 1 !important;
+}
+
+// Popover
+.popover {
+  max-width: 290px;
+  @extend .shadow-md;
+  .popover-content {
+    .chart-popover-body {
+      font-size: 13px;
+    }
+    .chart-popover-image {
+      margin-top: .3rem;
+      margin-right: 1rem;
+      margin-bottom: 1.5rem;
+      float: left;
+      max-width: unset;
+    }
+  }
+}
+
+// Chart
+.chart-popover {
+  cursor: pointer;
+  /*animation: point-pulse 5s infinite;
+  stroke: rgba(79, 144, 222, 1);
+  stroke-width: 0;
+  will-change: stroke-width, stroke;*/
+}
+
+@keyframes point-pulse {
+  50% {
+    stroke-width: 6px;
+    stroke: rgba(79, 144, 222, .1);
+  }
+}
+
+

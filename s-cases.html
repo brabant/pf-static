@@ -1,0 +1,140 @@
+---
+section: cases
+---
+
+<!-- Featured Snips -->
+<section class="pf-section pf-section-first pf-section-zero pb-5 bg-cases">
+
+    <div class="mb-3 mx-auto">
+        <div class="pf-punchline text-center">
+            <h1 class="mb-3">Истории успеха</h1>
+            <p class="f-lg col-md-10 mx-auto">Кейсы и отзывы пользователей&nbsp;— как продвигать бизнес с&nbsp;помощью
+                Pressfeed</p>
+        </div>
+    </div>
+
+    <div class="p-cases">
+        {% assign cases = site.cases | sort: "date" | reverse %}
+        {% for case in cases limit:2 %}
+        <a class="p-cases-item"
+           href="{{site.url}}{{site.baseurl}}{{case.url}}"
+           style="background-image: url({{case.thumbnail}});">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">{{case.tag}}</span>
+                    <span class="float-md-right text-warning">{{case.company}}</span>
+                </div>
+                <h2 class="p-case-title">{{case.title}}</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Cite -->
+<section class="pf-section pf-section-zero py-6">
+    <div class="row justify-content-center mx-0">
+        <div class="col-sm-8">
+            <a class="pf-cite" href="{{site.url}}{{site.baseurl}}/cases/altsuite.html">
+                <p class="mb-3">Через Pressfeed мы&nbsp;вышли на&nbsp;отраслевые
+                    издания, с&nbsp;которыми не&nbsp;были знакомы раньше. Каждый день мы&nbsp;получаем как минимум по&nbsp;одному
+                    контакту c&nbsp;журналистами.</p>
+                <div class="f-sm">Стартап <cite>AltSuite</cite></div>
+            </a>
+            <div class="text-center mt-5">
+                <a class="btn btn-lg btn-warning t-m px-5 py-3"
+                   href="https://pressfeed.ru/signup">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Rest Snips -->
+<section class="pf-section pf-section-zero bg-cases">
+
+    <div class="p-cases">
+        {% for case in cases offset:2 %}
+            <a class="p-cases-item"
+           href="{{site.url}}{{site.baseurl}}{{case.url}}"
+           style="background-image: url({{site.url}}{{site.baseurl}}/{{case.thumbnail}})">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">{{case.tag}}</span>
+                    <span class="float-md-right text-warning">{{case.company}}</span>
+                </div>
+                <h2 class="p-case-title">{{case.title}}</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        {% endfor %}
+        <a class="p-cases-item"
+           href="s-story.html"
+           style="background-image: url({{site.url}}{{site.baseurl}}/assets/img/bocharsky.jpg);">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">История</span>
+                    <span class="float-md-right text-warning">Константин Бочарский</span>
+                </div>
+                <h2 class="p-case-title">Как журналист «Коммерсанта» сделал Pressfeed,
+                    чтобы быстрее находить материал и&nbsp;героев для&nbsp;статей</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+    </div>
+</section>
+
+<!-- Cite -->
+<section class="pf-section pf-section-zero py-6">
+    <div class="row justify-content-center mx-0">
+        <div class="col-sm-8">
+            <a class="pf-cite" href="{{site.url}}{{site.baseurl}}/cases/osom.html">
+                <p class="mb-3">Я стараюсь отслеживать запросы журналистов на Pressfeed каждый день. Это очень удобно:
+                    сразу видеть все, что интересует деловые медиа, искать любые варианты для упоминаний.</p>
+                <div class="f-sm">Магазин <cite>«ОСОМ Кофе»</cite></div>
+            </a>
+            <div class="text-center mt-5">
+                <a class="btn btn-lg btn-warning t-m px-5 py-3"
+                   href="https://pressfeed.ru/signup">Регистрация</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials  -->
+<section class="pf-section-zero py-7 bg-light">
+    <h2 class="t-l text-center mb-5">Соцсети про&nbsp;Pressfeed</h2>
+    <div class="pf-testimonials">
+        {% assign showOnInit = 8 %}
+        {% for testimonial in site.data.testimonials.testimonials.testimonials limit: showOnInit %}
+        <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
+            <div class="pf-testimonial-text">{{testimonial.text}}</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
+                <div>
+                    <div class="text-black">{{testimonial.name}}</div>
+                    <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="pf-testimonials js-pf-testimonials-extra d-none">
+        {% for testimonial in site.data.testimonials.testimonials.testimonials offset: showOnInit %}
+        <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
+            <div class="pf-testimonial-text">{{testimonial.text}}</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
+                <div>
+                    <div class="text-black">{{testimonial.name}}</div>
+                    <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+    <div class="text-center">
+        <button class="btn btn-outline-primary cursor js-testimonials-more-button mt-3" type="button">Еще отзывы
+        </button>
+    </div>
+</section>

@@ -1,0 +1,33 @@
+---
+label: Шаблон для отзывов
+hide_body: true
+is_partial: false
+fields:
+- type: field_group_list
+  label: Testimonials
+  name: testimonials
+  config:
+    min: '1'
+    labelField: name
+  fields:
+  - type: text
+    label: Имя пользователя
+    name: name
+  - type: text
+    label: Текст
+    name: text
+  - type: text
+    label: Компания
+    name: company
+  - type: text
+    name: link
+    label: Ссылка
+    description: 'Дай полный URL. Например: https://lala.ru/source'
+  - type: file
+    name: avatar
+    label: Аватар
+    description: Картинка не больше 30 Кб, если можно
+    config:
+      maxSize: '1'
+pages:
+- _data/testimonials/testimonials.yml

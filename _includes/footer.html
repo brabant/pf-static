@@ -1,0 +1,39 @@
+<!-- Footer -->
+<footer id="contact" class="pf-footer">
+
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+
+        {% if page.layout == "case" %}
+            <h2 class="t-l text-center mb-5">Тоже хотите попасть в СМИ и получить больше клиентов?</h2>
+            <div class="text-center mb-5">
+                <a class="btn btn-lg btn-warning t-m px-5 py-3"
+                   href="https://pressfeed.ru/signup">Начать работу c Pressfeed</a>
+            </div>
+        {% else %}
+            <h2 class="t-l text-center mb-5">Начать работу с Pressfeed</h2>
+            <div class="text-center mb-5">
+                <a class="btn btn-lg btn-warning t-m"
+                   href="https://pressfeed.ru/signup">
+                    {% if page.section == "specials" %}
+                    Бесплатная регистрация
+                    {% else %}
+                    Регистрация
+                    {% endif %}
+                </a>
+            </div>
+        {% endif %}
+
+        <div class="text-black">
+            Остались вопросы?<br class="d-block d-sm-none"> Свяжитесь с&nbsp;нами:<br>
+            <a href="tel:+7-495-120-80-19">{{ site.phone }}</a>, <a href="mailto:sales@pressfeed.ru">{{ site.email
+            }}</a><br>
+            Объясним, поможем.
+        </div>
+
+        {% include social.html %}
+
+    </div>
+
+</footer>
+
+{% include scripts-common.html %}

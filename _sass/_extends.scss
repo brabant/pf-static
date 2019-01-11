@@ -1,0 +1,135 @@
+// Lines
+
+.b {
+  border: 1px solid $teal;
+  &t {
+    border-top: 1px solid $teal;
+  }
+  &b {
+    border-bottom: 1px solid $teal;
+  }
+  &-gray {
+    border: 1px solid #eee;
+  }
+  &t-gray {
+    border-top: 1px solid #eee;
+  }
+  &r {
+      border-right: 1px solid $teal;
+  }
+  &l {
+    border-left: 1px solid $teal;
+  }
+}
+
+.b-link-black {
+  border-bottom: 1px dotted rgba(0,0,0,0.35);
+}
+
+// Shadows
+
+.shadow-lg {
+  box-shadow: 0 35px 54px rgba(0,0,0,.1), 0 5px 20px rgba(0,0,0,.05), 0 0 1px rgba(0,0,0,.05);
+}
+
+.shadow-md {
+  box-shadow: 0 .4rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.shadow-xs {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-0 {
+  box-shadow: none !important;
+}
+
+// Colors
+
+.text-black {
+  color: $black !important;
+}
+
+.text-gray-light {
+  color: $gray-light !important;
+}
+
+.text-gray-light-2 {
+  color: $gray-light-2 !important;
+}
+
+.text-blue-light {
+  color: $blue-light !important;
+}
+
+.text-blue-lighter {
+  color: $blue-lighter !important;
+}
+
+// Text sizes
+
+.f-xs {
+  font-size: $font-size-xs;
+}
+
+.f-sm {
+  font-size: $font-size-sm;
+}
+
+.f-base {
+  font-size: $font-size-base;
+}
+
+.f-lg {
+  font-size: $font-size-lg;
+}
+
+.f-xl {
+  font-size: 3.5rem;
+}
+
+// Weights
+
+.f-bold,
+.fw-800 {
+  font-weight: 800;
+}
+
+.f-semi,
+.fw-600 {
+  font-weight: 600;
+}
+
+.f-med,
+.fw-500 {
+  font-weight: 500;
+}
+
+.f-normal,
+.fw-400 {
+  font-weight: 400;
+}
+
+.f-light,
+.fw-300 {
+  font-weight: 300;
+}
+
+.f-thin,
+.fw-200 {
+  font-weight: 200;
+}
+
+
+// Positioning
+
+.relative {
+  position: relative;
+}
+
+
+// Cursor
+.cursor {
+ cursor: pointer;
+}
+

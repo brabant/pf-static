@@ -1,0 +1,41 @@
+<!-- Header -->
+<header class="pf-header">
+  <div class="pf-header-container">
+    <div class="pf-header-section d-flex align-items-stretch">
+      <a class="pf-logo" href="{{site.url}}{{site.baseurl}}/s-index.html">pressfeed</a>
+    </div>
+    <div class="pf-header-section d-none d-lg-flex">
+      <nav class="pf-header-nav">
+        <a class="pf-header-nav-item{% if page.section == 'jours' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-jours.html">Журналистам</a>
+        <a class="pf-header-nav-item{% if page.section == 'experts' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-experts.html">Экспертам</a>
+        <a class="pf-header-nav-item{% if page.section == 'cases' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-cases.html">Кейсы</a>
+        <a class="pf-header-nav-item js-plans-link{% if page.section == 'plans' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-plans.html">Тарифы</a>
+        <a class="pf-header-nav-item" href="https://news.pressfeed.ru/">Блог</a>
+        <a class="pf-header-nav-item text-primary {% if page.section == 'vp' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-vp.html?utm_campaign=pressfeed&utm_medium=header&utm_source=do_it_for_me">Сделать все за меня</a>
+      </nav>
+    </div>
+    <div class="pf-header-section d-none d-lg-flex">
+      <a class="btn btn-sm btn-warning" href="//pressfeed.ru/signup">Регистрация</a>
+      <a class="btn btn-sm btn-link ml-2" href="//pressfeed.ru/signin">Вход</a>
+    </div>
+    <a class="btn btn-sm btn-warning d-lg-none ml-auto mr-3" href="//pressfeed.ru/signup">Регистрация</a>
+    <div class="hidden-lg-up burger" id="menu-mob-trigger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu-->
+<div class="menu-mob" id="menu-mob">
+  <nav class="d-flex flex-column h4 system align-items-center">
+    <a class="text-danger" href="{{site.url}}{{site.baseurl}}/s-vp.html?utm_campaign=pressfeed&utm_medium=header-mob&utm_source=do_it_for_me">Сделать все за меня</a>
+    <a href="{{site.url}}{{site.baseurl}}/s-jours.html">Журналистам</a>
+    <a href="{{site.url}}{{site.baseurl}}/s-experts.html">Экспертам</a>
+    <a href="{{site.url}}{{site.baseurl}}/s-cases.html">Кейсы</a>
+    <a class="js-plans-link" href="{{site.url}}{{site.baseurl}}/s-plans.html">Тарифы</a>
+    <a href="//news.pressfeed.ru/">Блог</a>
+    <a class="pt-4 text-black" href="//pressfeed.ru/signin">Вход</a>
+  </nav>
+</div>
