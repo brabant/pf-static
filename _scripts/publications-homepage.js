@@ -40,6 +40,7 @@
                 .then(res => res.json())
                 .then((data) => {
                     let obj = data.data;
+
                     obj.forEach((item, i) => {
                         let date = '';
                         let queryStr = 'Запрос';
