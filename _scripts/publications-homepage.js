@@ -50,7 +50,7 @@
                             let pubsLink = obj[i].publication_link || obj[i].publication_document;
 
                             let el = `
-                            <div class="${i === 0 ? 'col-sm-8 ' : 'col-sm-4 '} mb-4">
+                            <div class="${i === 0 ? 'col-md-8 ' : 'col-md-4 '} mb-4">
                                 <div class="pf-pubs-featured-item ${i === 0 ? ' -first' : ''}">
                                     <div class="d-flex justify-content-start align-items-center mb-2 t-s">
                                         <img onerror="this.classList.add('pf-favicon-placeholder')" 

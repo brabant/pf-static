@@ -1236,6 +1236,7 @@ a.pf-cite:hover {
   h2 {
     @extend .t-m, .fw-600;
     margin-bottom: 1rem;
+    max-width: 100%;
   }
   img {
     width: 16px;
@@ -1244,7 +1245,7 @@ a.pf-cite:hover {
   &.-first {
     h2 {
       @include media-breakpoint-up(md) {
-        font-size: 1.7rem;
+        font-size: 1.8rem;
       }
     }
   }
