@@ -5,14 +5,10 @@
 
 <body>
 
-{% if jekyll.environment == 'production' %}
-    {% include noscript-analytics.html %}
-{% endif %}
-
 {% if page.header == 'personal-brand' %}
-    {% include header-personal-brand.html %}
+    {% include header-special-pb.html %}
 {% else %}
-    {% include header-plain.html %}
+    {% include header-special.html %}
 {% endif %}
 
 {{ content }}

@@ -1,0 +1,14 @@
+{
+  "name": "pf-static",
+  "version": "1.0.0",
+  "description": "Pressfeed",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

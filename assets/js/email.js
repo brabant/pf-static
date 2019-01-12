@@ -1,3 +1,5 @@
+"use strict";
+
 $(document).ready(function () {
   for (var i = 1; i <= 9; i++) {
     (function () {
@@ -15,28 +17,32 @@ $(document).ready(function () {
         var data = {
           stage: 'email',
           email: email.trim(),
-          hash: hash,
+          hash: hash
         };
+
         if (utm_source) {
           data.utm_source = utm_source;
         }
+
         if (utm_medium) {
           data.utm_medium = utm_medium;
         }
+
         if (utm_campaign) {
           data.utm_campaign = utm_campaign;
         }
+
         if (utm_content) {
           data.utm_content = utm_content;
         }
+
         $.ajax({
           method: 'POST',
           url: 'https://api.pressfeed.ru/logs/registration',
-          data: data,
-        })
-          .done(function() {
-            window.location.href = '/signup';
-          });
+          data: data
+        }).done(function () {
+          window.location.href = '/signup';
+        });
       });
     })();
   }
@@ -44,16 +50,13 @@ $(document).ready(function () {
 
 function guid() {
   function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16)
-      .substring(1);
+    return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
   }
+
   return s4() + s4() + s4() + s4();
 }
 
 function getCookie(name) {
-  const matches = document.cookie.match(new RegExp(
-    `(?:^|; )${name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1')}=([^;]*)`
-  ));
+  var matches = document.cookie.match(new RegExp("(?:^|; )".concat(name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1'), "=([^;]*)")));
   return matches ? decodeURIComponent(matches[1]) : undefined;
 }

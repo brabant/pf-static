@@ -71,7 +71,119 @@ layout: default
 
         </div>
         <div class="pf-layout-case-right">
-            {%- include signup.html -%}
+            <!-- Signup in modal -->
+
+            <div class="pf-signup-modal">
+
+                <form class="pf-signup-form js-signup-form">
+
+                    <div class="card-header px-2 bg-warning">
+                        <span class="fw-800">Хотите так же? Начните работать с Pressfeed</span>
+                    </div>
+
+                    <div class="px-2 pb-3 bg-warning">
+                        <!-- Name -->
+                        <div class="form-group">
+                            <input name="name" type="text" class="form-control js-input-common" placeholder="Имя"
+                                   maxlength="200" minlength="1" required>
+                        </div>
+                        <!-- Surname -->
+                        <div class="form-group">
+                            <input name="surname" type="text" class="form-control js-input-common" placeholder="Фамилия"
+                                   maxlength="200" minlength="1" required>
+                        </div>
+                        <!-- Phone -->
+                        <div class="form-group">
+                            <input name="phone" type="tel" class="form-control js-input-common" placeholder="Телефон"
+                                   maxlength="20" minlength="6" required
+                                   pattern="^[0-9-+s()]*$"
+                                   title="Надо указать номер телефона, например, так: +7 555 555-55-55)">
+                        </div>
+                        <!-- Email - Login -->
+                        <div class="form-group">
+                            <input name="email" type="email" class="form-control js-input-common" placeholder="Почта"
+                                   maxlength="200" minlength="5" required>
+                        </div>
+                        <!-- Password -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input name="password" type="password"
+                                       class="form-control js-input-common js-password-input" placeholder="Пароль"
+                                       maxlength="200" minlength="5"
+                                       required style="margin-right: -1px">
+                                <div class="input-group-addon bg-grad-light cursor js-password-toggle">
+                                    <i class="material-icons js-password-icon">visibility_off</i>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="bg-warning">
+                        <ul class="nav nav-pills justify-content-center px-2 pt-0">
+                            <a class="btn btn-secondary w-100 f-sm fw-500 px-2 mr-2 js-signup-tab js-tab-expert"
+                               data-toggle="tab" href="#expert-pane">Я эксперт</a>
+                            <a class="btn btn-secondary w-100 f-sm fw-500 px-2 js-signup-tab js-tab-jour"
+                               data-toggle="tab" href="#jour-pane">Я журналист</a>
+                        </ul>
+                        <div class="tab-content bg-white px-2">
+                            <div class="tab-pane js-pane-expert pt-3" id="expert-pane" role="tabpanel">
+                                <!-- Company name -->
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control js-input-expert"
+                                           id="company-name"
+                                           placeholder="Название вашей компании"
+                                           maxlength="200" minlength="1">
+                                </div>
+                                <!-- Position -->
+                                <div class="form-group">
+                                    <input name="position" type="text" class="form-control js-input-expert"
+                                           id="company-position"
+                                           placeholder="Ваша должность"
+                                           maxlength="200" minlength="2">
+                                </div>
+                            </div>
+                            <div class="tab-pane js-pane-jour pt-3" id="jour-pane" role="tabpanel">
+                                <!-- Media name -->
+                                <div class="form-group">
+                                    <input name="name" type="text" class="form-control js-input-jour" id="media-name"
+                                           placeholder="Название вашего СМИ" maxlength="200" minlength="1">
+                                </div>
+                                <!-- Position -->
+                                <div class="form-group">
+                                    <input name="position" type="text" class="form-control js-input-jour"
+                                           id="media-position"
+                                           placeholder="Ваша должность" maxlength="200" minlength="2">
+                                </div>
+                                <!-- Site -->
+                                <div class="form-group">
+                                    <input name="site" type="text" class="form-control js-input-jour" id="media-site"
+                                           placeholder="Сайт СМИ" maxlength="200" minlength="4">
+                                </div>
+                                <!-- City -->
+                                <div class="form-group">
+                                    <input name="city" type="text" class="form-control js-input-jour" id="media-city"
+                                           placeholder="Город">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="card-footer px-2 js-signup-footer">
+                        <button type="submit" class="btn btn-danger btn-block text-white fw-600 js-submit-button">
+                            Зарегистрироваться
+                        </button>
+                    </div>
+
+
+                </form>
+
+                <div class="js-signup-message d-none align-items-start text-danger fw-500  pt-1 f-xs">
+                    <i class="material-icons t-n">error</i>&nbsp;<span class="js-signup-message-text">fdjdfkdkfjkdjfjdkjf dklkdlskd sdd</span>
+                </div>
+
+            </div>
         </div>
     </div>
 
