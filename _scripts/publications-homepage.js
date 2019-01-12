@@ -50,15 +50,17 @@
                             let pubsLink = obj[i].publication_link || obj[i].publication_document;
 
                             let el = `
-                            <div class="pf-pubs-featured-item">
-                                <div class="d-flex justify-content-start align-items-center mb-2 t-s">
-                                    <img onerror="this.classList.add('pf-favicon-placeholder')" 
-                                    src="//${cleanSiteLink(obj[i].smi_site)}/favicon.ico" alt="">
-                                    <a class="fw-800 text-gray-dark ml-2" href="${pubsLink}" target="_blank">${obj[i].smi_name}</a>
-                                    ${date}
+                            <div class="${i === 0 ? 'col-sm-8 ' : 'col-sm-4 '} mb-4">
+                                <div class="pf-pubs-featured-item ${i === 0 ? ' -first' : ''}">
+                                    <div class="d-flex justify-content-start align-items-center mb-2 t-s">
+                                        <img onerror="this.classList.add('pf-favicon-placeholder')" 
+                                        src="//${cleanSiteLink(obj[i].smi_site)}/favicon.ico" alt="">
+                                        <a class="fw-800 text-gray-dark ml-2" href="${pubsLink}" target="_blank">${obj[i].smi_name}</a>
+                                        ${date}
+                                    </div>
+                                    <h2><a class="text-black" href="${pubsLink}" target="_blank">${obj[i].publication_title}</a></h2>
+                                    <a class="badge-arrow mt-auto mr-sm-3" href="//pressfeed.ru/query/${obj[i].query_id}" target="_blank">${queryStr}</a>
                                 </div>
-                                <h2><a class="text-black" href="${pubsLink}" target="_blank">${obj[i].publication_title}</a></h2>
-                                <a class="badge-arrow mt-auto mr-sm-3" href="//pressfeed.ru/query/${obj[i].query_id}" target="_blank">${queryStr}</a>
                             </div>`;
 
                             container.insertAdjacentHTML('beforeEnd', el);

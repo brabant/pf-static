@@ -31,13 +31,6 @@ facebook_link:  https://www.facebook.com/prsfd
 # Build settings
 markdown: kramdown
 
-sass:
-  sass_dir: _sass
-  style: compressed
-
-plugins:
-- jekyll-autoprefixer
-
 collections:
   cases:
     output: true
