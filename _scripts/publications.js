@@ -52,7 +52,7 @@
 
             btn.addEventListener('click', function (e) {
                 e.preventDefault();
-                $(this).hide();
+                this.parentNode.removeChild(this);
                 addPubs(publicationsSource, container, publicationsLimit, publicationsAdded, search);
             });
 
