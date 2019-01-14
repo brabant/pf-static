@@ -84,9 +84,10 @@
 
             let url = source + '?limit=' + limit + '&offset=' + offset + '&match=' + search;
 
-            fetch(url)
-                .then((response) => response.json())
-                .then((data) => {
+            $.ajax({
+                type: 'get',
+                url: url,
+                success: function (data) {
 
                     let publicationsFetched = data.count;
                     let obj = data.data;
@@ -121,37 +122,46 @@
                     </div>`;
                     }
 
-                });
+                }
+
+            });
         };
 
         const addFeatured = (source, container) => {
-            fetch(source)
-                .then(res => res.json())
-                .then((data) => {
+
+            $.ajax({
+                type: 'get',
+                url: source,
+                success: function (data) {
                     let obj = data.data;
-                    obj.forEach((item, i) => {
+
+                    for (let i = 0; i < obj.length; i++) {
                         let date = '';
                         let queryStr = 'Запрос';
                         if (i === 0) {
-                            date = `&nbsp;&nbsp;${formatDate(item.publication_created_at)}`;
+                            date = `&nbsp;&nbsp;${formatDate(obj[i].publication_created_at)}`;
                             queryStr = `Как выглядел запрос СМИ <span class="d-none d-sm-inline">для этой публикации</span>`;
                         }
 
-                        let pubsLink = item.publication_link || item.publication_document;
+                        let pubsLink = obj[i].publication_link || obj[i].publication_document;
 
                         let el = `
-                <div class="pf-pubs-featured-item">
-                    <div class="d-flex justify-content-start align-items-center mb-2 t-s">
-                        <img onerror="this.classList.add('pf-favicon-placeholder')" 
-                        src="//${cleanSiteLink(item.smi_site)}/favicon.ico" alt="">
-                        <a class="fw-800 text-gray-dark ml-2" href="${pubsLink}" target="_blank">${item.smi_name}</a>&nbsp;&nbsp;${date}
-                    </div>
-                    <h2><a class="text-black" href="${pubsLink}" target="_blank">${item.publication_title}</a></h2>
-                    <a class="badge-arrow mt-auto mr-sm-3" href="//pressfeed.ru/query/${item.query_id}" target="_blank">${queryStr}</a>
-                </div>`;
+                            <div class="${i === 0 ? 'col-md-8 ' : 'col-md-4 '} mb-4">
+                                <div class="pf-pubs-featured-item ${i === 0 ? ' -first' : ''}">
+                                    <div class="d-flex justify-content-start align-items-center mb-2 t-s">
+                                        <img onerror="this.classList.add('pf-favicon-placeholder')" 
+                                        src="//${cleanSiteLink(obj[i].smi_site)}/favicon.ico" alt="">
+                                        <a class="fw-800 text-gray-dark ml-2" href="${pubsLink}" target="_blank">${obj[i].smi_name}</a>&nbsp;&nbsp;${date}
+                                    </div>
+                                    <h2><a class="text-black" href="${pubsLink}" target="_blank">${obj[i].publication_title}</a></h2>
+                                    <a class="badge-arrow mt-auto mr-sm-3" href="//pressfeed.ru/query/${obj[i].query_id}" target="_blank">${queryStr}</a>
+                                </div>
+                            </div>`;
                         container.insertAdjacentHTML('beforeEnd', el);
-                    })
-                });
+                    }
+
+                }
+            });
         };
 
         const searchPubs = (value) => {
@@ -180,14 +190,13 @@
         });
 
         // search by hints
-        pubsSearchHints.forEach(item => {
-            item.addEventListener('click', function (e) {
+        for (let i = 0; i < pubsSearchHints.length; i++) {
+            pubsSearchHints[i].addEventListener('click', function (e) {
                 e.preventDefault();
-                publicationsSearchInput.value = item.innerText;
-                searchPubs(item.innerText);
+                publicationsSearchInput.value = pubsSearchHints[i].innerText;
+                searchPubs(pubsSearchHints[i].innerText);
             })
-        })
-
+        }
     }
 
 })();
