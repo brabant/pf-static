@@ -21,11 +21,13 @@ $(() => {
         const menuMobBtn = document.getElementById('menu-mob-trigger');
         const menuMob = document.getElementById('menu-mob');
 
-        menuMobBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            this.classList.toggle('is-open');
-            menuMob.classList.toggle('is-open');
-        });
+        if (menuMobBtn) {
+            menuMobBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.classList.toggle('is-open');
+                menuMob.classList.toggle('is-open');
+            });
+        }
     });
 }());
 
