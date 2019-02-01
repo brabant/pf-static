@@ -94,7 +94,6 @@ $(document).ready(function () {
                         const metrikaParams = {myParam: 'Рега в кейсе', email: loginData.email,};
                         const metrikaCallback = () => console.log('Запрос в Метрику отправлен');
                         window.ym(27035592, 'reachGoal', 'RegistrationSuccess', metrikaParams, metrikaCallback());
-                        //window.location.href = "https://pressfeed.ru/all-queries";
                         window.location.pathname = '/s-hello.html';
                     },
                     error: function (response) {
