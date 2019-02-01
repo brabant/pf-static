@@ -21,7 +21,7 @@ section: cases
         {% assign cases = site.cases | sort: "date" | reverse %}
         {% for case in cases limit:2 %}
         <a class="p-cases-item"
-           href="{{case.url}}"
+           href="{{site.url}}{{site.baseurl}}{{case.url}}"
            style="background-image: url('{{case.thumbnail}}')">
             <div class="p-case-inner">
                 <div class="p-case-header">
@@ -29,7 +29,6 @@ section: cases
                     <span class="float-md-right text-warning">{{case.company}}</span>
                 </div>
                 <h2 class="p-case-title">{{case.title}}</h2>
-                <p>{{ case.date }}</p>
             </div>
             <div class="p-cases-back"></div>
         </a>
@@ -69,7 +68,6 @@ section: cases
                     <span class="float-md-right text-warning">{{case.company}}</span>
                 </div>
                 <h2 class="p-case-title">{{case.title}}</h2>
-                <p>{{ case.date }}</p>
             </div>
             <div class="p-cases-back"></div>
         </a>
