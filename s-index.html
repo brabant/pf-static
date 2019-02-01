@@ -252,7 +252,7 @@ section: index
                 <p>Истории и отзывы наших пользователей</p>
             </div>
             <div class="p-cases">
-                {% assign top-cases = site.cases | where: "homepage", "true" %}
+                {% assign top-cases = site.cases | where: "homepage", "true" | sort: "date" | reverse %}
                 {% for case in top-cases limit:2 %}
                 <a class="p-cases-item"
                    href="{{site.url}}{{site.baseurl}}{{case.url}}"
