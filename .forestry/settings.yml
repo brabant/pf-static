@@ -17,7 +17,7 @@ sections:
   label: Отзывы
   create: all
   match: "**/*"
-upload_dir: assets/upload
+upload_dir: assets/uploads
 public_path: "/assets/uploads"
 front_matter_path: ''
 use_front_matter_path: false
