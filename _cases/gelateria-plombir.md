@@ -1,7 +1,7 @@
 ---
 title: Как публикации в СМИ помогли нам продавать франшизу, увеличить трафик на сайт
   в 10 раз и нарастить бизнес в 1,5 раза за год
-date: 2019-01-31 15:39:09 +0000
+date: 2018-11-26 15:39:09 +0000
 lead: Как с помощью контент-маркетинга продавать франшизу. Опыт международной франшизы
   кафе-мороженого Gelateria Plombir.
 company: Gelateria Plombir
@@ -38,7 +38,7 @@ thumbnail: assets/uploads/bd56801b-3cd1-45b4-97e6-e191103e0bbb_670x0_resize.png
 
 ![](../assets/uploads/image6-2.png)
 
-_Один из_ [_запросов_](https://pressfeed.ru/query/22834) _издания Buybrand на Pressfeed_
+###### Один из [запросов](https://pressfeed.ru/query/22834) издания Buybrand на Pressfeed
 
 В итоге мы рассказали изданию, как мы [вышли на рынок Грузии](http://www.buybrand.ru/news/12931/?sphrase_id=106501), о нашем [пакетном предложении для франчайзи](http://www.buybrand.ru/news/13154/?sphrase_id=106501), давали комментарий по поводу [развития франчайзинга в России](http://www.buybrand.ru/articles/13012/?sphrase_id=106501).
 
