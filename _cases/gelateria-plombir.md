@@ -7,7 +7,7 @@ lead: Как с помощью контент-маркетинга продав�
 company: Gelateria Plombir
 tag:
 - франшиза
-homepage: false
+homepage: true
 thumbnail: assets/uploads/bd56801b-3cd1-45b4-97e6-e191103e0bbb_670x0_resize.png
 
 ---
