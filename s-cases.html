@@ -1,6 +1,9 @@
 ---
+title: Кейсы — истории успеха пользователей Pressfeed
 section: cases
 ---
+
+
 
 <!-- Featured Snips -->
 <div class="pt-7 pb-5 bg-cases">
@@ -14,17 +17,19 @@ section: cases
     </div>
 
     <div class="p-cases">
+
         {% assign cases = site.cases | sort: "date" | reverse %}
         {% for case in cases limit:2 %}
         <a class="p-cases-item"
-           href="{{site.url}}{{site.baseurl}}{{case.url}}"
-           style="background-image: url({{case.thumbnail}});">
+           href="{{case.url}}"
+           style="background-image: url('{{case.thumbnail}}')">
             <div class="p-case-inner">
                 <div class="p-case-header">
                     <span class="text-uppercase mr-1">{{case.tag}}</span>
                     <span class="float-md-right text-warning">{{case.company}}</span>
                 </div>
                 <h2 class="p-case-title">{{case.title}}</h2>
+                <p>{{ case.date }}</p>
             </div>
             <div class="p-cases-back"></div>
         </a>
@@ -64,6 +69,7 @@ section: cases
                     <span class="float-md-right text-warning">{{case.company}}</span>
                 </div>
                 <h2 class="p-case-title">{{case.title}}</h2>
+                <p>{{ case.date }}</p>
             </div>
             <div class="p-cases-back"></div>
         </a>
