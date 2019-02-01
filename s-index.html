@@ -272,7 +272,7 @@ section: index
                 <a class="btn btn-outline-primary" href="s-cases.html">Больше кейсов</a>
             </div>
             <div class="pf-testimonials">
-                {% assign showOnInit = 8 %}
+                {% assign showOnInit = 16 %}
                 {% for testimonial in site.data.testimonials.testimonials.testimonials limit: showOnInit %}
                 <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
                     <div class="pf-testimonial-text">{{testimonial.text}}</div>
