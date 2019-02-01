@@ -7,7 +7,7 @@ lead: Как развивать бренд, увеличивать продаж�
 company: ОСОМ Кофе
 tag:
 - Торговля
-homepage: true
+homepage: false
 thumbnail: assets/uploads/thumb-case-3.jpg
 
 ---
