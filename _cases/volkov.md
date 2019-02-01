@@ -11,7 +11,7 @@ lead: Что делать, когда контекстная реклама и �
 company: Digital.Tools
 tag:
 - digital-агентство
-homepage: false
+homepage: true
 thumbnail: assets/uploads/Волков-1400.jpg
 
 ---
