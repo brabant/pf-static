@@ -5,15 +5,30 @@
 
 <body>
 
-{% include header.html %}
+<!-- HEADER -->
+{% if page.section == 'hello' %}
+    <div class="pf-logo text-center py-3 mb-lg-7">pressfeed</div>
+{% elsif page.section == 'personal-brand' %}
+    {% include header-personal-brand.html %}
+{% elsif page.section == 'easy-publications' %}
+    {% include header-easy-publications.html %}
+{% else %}
+    {% include header.html %}
+{% endif %}
 
+<!-- CONTENT -->
 {{ content }}
 
-{% unless page.section == 'vp'  %}
+<!-- FOOTER -->
+{% unless page.section == 'vp' or page.section == 'hello' %}
     {% include footer.html %}
 {% endunless %}
 
-{% include scripts.html %}
+<!-- SCRIPTS -->
+<script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/jquery-3.3.1.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/bootstrap.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/slick.min.js"></script>
+<script src="{{site.url}}{{site.baseurl}}/assets/js/bundle.js?rev={{ site.time | date: '%s' }}"></script>
 
 </body>
 
