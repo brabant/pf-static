@@ -137,19 +137,8 @@ if (publicationsSection) {
 }
 
 // Plans switcher
-var planSwitcher = document.querySelector('.js-plan-switcher');
-
+const planSwitcher = document.querySelector('.js-plan-switcher');
 if (planSwitcher) {
-
-    // Animated scroll
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        header: '[data-scroll-header]',
-        ignore: '[data-scroll-ignore]',
-        offset: 70,
-    });
-
-    // Terms switcher
-
     for (let x = 0; x < 3; x++) {
         planSwitcher.getElementsByTagName('a')[x].addEventListener('click', function (e) {
             e.preventDefault();
@@ -191,7 +180,6 @@ if (planSwitcher) {
         })
 
     }
-
 }
 
 
