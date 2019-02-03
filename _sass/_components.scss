@@ -197,6 +197,7 @@
 
 .pf-number-big {
   position: relative;
+  max-width: 100%;
   @include media-breakpoint-up(sm) {
     padding-top: 2rem;
     padding-left: 10vw;
