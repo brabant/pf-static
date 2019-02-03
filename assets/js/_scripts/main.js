@@ -6,15 +6,6 @@ if (localStorage.token) {
     }
 }
 
-// BS popovers and tooltips
-$(() => {
-    $('[data-toggle="popover"]').popover();
-});
-
-$(() => {
-    $('[data-toggle="tooltip"]').tooltip();
-});
-
 // Mobile menu
 (function () {
     window.addEventListener('DOMContentLoaded', () => {
@@ -182,9 +173,7 @@ if (planSwitcher) {
     }
 }
 
-
 // Testimonials
-
 (function () {
 
     const testimonialsBtn = document.querySelector('.js-testimonials-more-button');
@@ -205,7 +194,6 @@ if (planSwitcher) {
 
 
 // Carousel captions
-
 let bsCarousel = document.querySelector('#slider-features');
 if (bsCarousel) {
     let listHowtoItems = document.querySelectorAll('.pf-number-big');
@@ -215,3 +203,5 @@ if (bsCarousel) {
         })
     }
 }
+
+console.log('testtesttest')
