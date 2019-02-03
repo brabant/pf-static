@@ -1,18 +1,17 @@
 const child = require('child_process');
 const gulp = require('gulp');
-const shell = require('gulp-shell');
-const replace = require('gulp-replace');
-const fs = require('fs');
 const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
-const gutil = require('gulp-util');
+const util = require('gulp-util');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
+const mincss = require('gulp-minify-css');
 
 const jekyllLogger = (buffer) => {
     buffer.toString()
         .split(/\n/)
-        .forEach((message) => gutil.log('Jekyll: ' + message));
+        .forEach((message) => util.log('Jekyll: ' + message));
 };
 
 function onError(err) {
@@ -20,22 +19,13 @@ function onError(err) {
     this.emit('end');
 }
 
-/*gulp.task('serve', () => {
-    const jekyll = child.spawn('bundle', [
-        'exec',
-        'jekyll',
-        'serve',
-        '--incremental'
-    ]);
-    jekyll.stdout.on('data', jekyllLogger);
-    jekyll.stderr.on('data', jekyllLogger);
-});*/
-
 // DEV TASKS
 
 gulp.task('scss', function () {
     return gulp.src('assets/css/_sass/app.scss')
         .pipe(sass())
+        .pipe(autoprefixer())
+        .pipe(mincss({keepBreaks: false}))
         .on('error', onError)
         .pipe(gulp.dest('assets/css/'))
 });
@@ -50,7 +40,7 @@ gulp.task('js', () =>
         .pipe(gulp.dest('assets/js'))
 );
 
-gulp.task('jekyll-serve', function () {
+gulp.task('serve', function () {
     gulp.watch("assets/css/_sass/**/*.scss", ["scss"]);
     gulp.watch("assets/js/_scripts/**/*.js", ["js"]);
     const jekyllServe = child.spawn('bundle', [
