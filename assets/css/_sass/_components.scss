@@ -147,7 +147,8 @@
       flex-grow: 1;
       padding-right: 1rem;
       img {
-        flex: 0 0 16px;
+        flex-grow: 0;
+        flex-basis: 16px;
         width: 16px;
         height: 16px;
         max-width: 100%;
