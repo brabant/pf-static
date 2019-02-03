@@ -262,23 +262,21 @@ section: personal-brand
         <h2 class="t-l">Как привлекать трафик и увеличивать продажи с помощью Pressfeed</h2>
         <p class="t-m">Истории и отзывы наших пользователей</p>
     </div>
-    <div class="pf-testimonials mb-5">
-        <div class="p-cases">
-            {% for case in site.cases limit:4 %}
-            <a class="p-cases-item"
-               href="{{site.url}}{{site.baseurl}}{{case.url}}"
-               style="background-image: url({{site.url}}{{site.baseurl}}/{{case.thumbnail}})">
-                <div class="p-case-inner">
-                    <div class="p-case-header">
-                        <span class="text-uppercase mr-1">{{case.tag}}</span>
-                        <span class="float-md-right text-warning">{{case.company}}</span>
-                    </div>
-                    <h2 class="p-case-title">{{case.title}}</h2>
+    <div class="p-cases mb-5">
+        {% for case in site.cases limit:4 %}
+        <a class="p-cases-item"
+           href="{{site.url}}{{site.baseurl}}{{case.url}}"
+           style="background-image: url({{site.url}}{{site.baseurl}}/{{case.thumbnail}});">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">{{case.tag}}</span>
+                    <span class="float-md-right text-warning">{{case.company}}</span>
                 </div>
-                <div class="p-cases-back"></div>
-            </a>
-            {% endfor %}
-        </div>
+                <h2 class="p-case-title">{{case.title}}</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        {% endfor %}
     </div>
     <div id="reviews" class="pf-testimonials">
         {% assign showOnInit = 16 %}
