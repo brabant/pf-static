@@ -22,7 +22,6 @@ if (localStorage.token) {
     });
 }());
 
-
 // Handling queries and publictions on the main page
 var publicationsSection = document.querySelector('.js-pb');
 
