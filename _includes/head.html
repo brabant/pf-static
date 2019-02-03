@@ -1,7 +1,7 @@
 <head>
-
-    {% include analytics.html %}
-
+    {% if jekyll.environment == 'production' %}
+        {% include analytics.html %}
+    {% endif %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">

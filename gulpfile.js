@@ -7,6 +7,7 @@ const util = require('gulp-util');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
 const mincss = require('gulp-minify-css');
+const shell = require('gulp-shell');
 
 const jekyllLogger = (buffer) => {
     buffer.toString()
@@ -58,7 +59,8 @@ gulp.task('clean', function () {
 });
 
 gulp.task('build', ['js', 'scss', 'clean'], function () {
-    const jekyllServe = child.spawn('bundle', ['exec', 'jekyll', 'build']);
-    jekyllServe.stdout.on('data', jekyllLogger);
-    jekyllServe.stderr.on('data', jekyllLogger);
+    gulp.src('/', {read: false})
+        .pipe(shell([
+            'JEKYLL_ENV=production bundle exec jekyll build'
+        ]))
 });
