@@ -19,14 +19,14 @@ function onError(err) {
     this.emit('end');
 }
 
-// DEV TASKS
+//////////////////////// DEV ////////////////////////
 
 gulp.task('scss', function () {
     return gulp.src('assets/css/_sass/app.scss')
         .pipe(sass())
+        .on('error', onError)
         .pipe(autoprefixer())
         .pipe(mincss({keepBreaks: false}))
-        .on('error', onError)
         .pipe(gulp.dest('assets/css/'))
 });
 
@@ -40,15 +40,25 @@ gulp.task('js', () =>
         .pipe(gulp.dest('assets/js'))
 );
 
-gulp.task('serve', function () {
+gulp.task('develop', function () {
     gulp.watch("assets/css/_sass/**/*.scss", ["scss"]);
     gulp.watch("assets/js/_scripts/**/*.js", ["js"]);
-    const jekyllServe = child.spawn('bundle', [
-        'exec',
-        'jekyll',
-        'serve',
-        '--incremental'
-    ]);
+    const jekyllServe = child.spawn('bundle', ['exec', 'jekyll', 'serve']);
+    jekyllServe.stdout.on('data', jekyllLogger);
+    jekyllServe.stderr.on('data', jekyllLogger);
+});
+
+
+//////////////////////// BUILD ////////////////////////
+
+gulp.task('clean', function () {
+    const jekylClean = child.spawn('bundle', ['exec', 'jekyll', 'clean']);
+    jekylClean.stdout.on('data', jekyllLogger);
+    jekylClean.stderr.on('data', jekyllLogger);
+});
+
+gulp.task('build', ['js', 'scss', 'clean'], function () {
+    const jekyllServe = child.spawn('bundle', ['exec', 'jekyll', 'build']);
     jekyllServe.stdout.on('data', jekyllLogger);
     jekyllServe.stderr.on('data', jekyllLogger);
 });

@@ -202,5 +202,3 @@ if (bsCarousel) {
         })
     }
 }
-
-console.log('testtesttest')
