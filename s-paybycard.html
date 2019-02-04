@@ -1,0 +1,121 @@
+---
+title: Подтверждение оплаты
+description: Первый в России сервис журналистских запросов. Помогаем журналистам быстро получать фактуру для статей. А экспертам и пиарщикам — PR и упоминания о компании в прессе. Отвечай на запросы журналистов. Получай пиар и публикации в лучших СМИ России
+section: extra
+---
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6 offset-md-3">
+
+            <h1 class="h2 mb-3">Подтвердите оплату банковской картой</h1>
+
+            <div class="mb-5">
+                <p class="text-gray-light">Вы&nbsp;заказали профессиональный аккаунт на&nbsp;Pressfeed.ru с&nbsp;оплатой
+                    банковской
+                    картой. Пожалуйста, проверьте данные ниже. После подтверждения вы&nbsp;перейдете на
+                    страницу «Яндекс.Кассы», где сможете оплатить заказ.</p>
+                <p class="text-gray-light">Если есть вопросы, свяжитесь с&nbsp;нами: <a
+                        href="mailto:sales@pressfeed.ru">sales@pressfeed.ru</a>, <nobr>8 (495) 120-80-19</nobr>.
+                </p>
+            </div>
+
+            <div class="card" id="card-container">
+
+                <div class="card-block">
+                    <div class="cssload-container">
+                        <div class="cssload-speeding-wheel"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-md-right mt-3" id="buttons-block">
+                <button class="btn btn-lg btn-primary mb-3" disabled>Перейти к оплате</button>
+                <a href="/" class="btn  btn-lg btn-secondary float-md-left mb-3">Отменить</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return (false);
+        }
+
+        var token = getQueryVariable('token');
+        var invoice_id = getQueryVariable('invoice_id');
+        if (token && invoice_id) {
+
+            $.ajax({
+                url: 'https://api.pressfeed.ru/tariffs/pay-by-card?token=' + token + '&invoice_id=' + invoice_id,
+                type: 'GET',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'application/json',
+                    'Current-Version': 'v1',
+                },
+            }).done(function (response) {
+
+                if (response.data && response.data.yandex) {
+                    var cardData = '<div class="card-block">' +
+                        '<h6 class="text-gray-light">Счет №' + response.data.number + '</h6>' +
+                        '<p>Плательщик: ' + response.data.company + '<br>' +
+                        'Тариф: "' + response.data.tariff.name + '"<br>' +
+                        'Период: ' + response.data.period + ' мес.<br>' +
+                        'Количество пользователей: ' + response.data.count + '<br>' +
+                        'Почта для отправки кода активации: ' + response.data.email + '</p>' +
+                        '<p class="divider"></p>' +
+                        '<p>Стоимость заказа: <strong>' + response.data.money + ' руб.</strong></p>' +
+                        '</div>';
+
+                    $('#card-container').html(cardData);
+
+                    var yandex = '<form method="POST" action="https://money.yandex.ru/eshop.xml">' +
+                        '<input type="hidden" name="shopId" value="' + response.data.yandex.shopId + '">' +
+                        '<input type="hidden" name="scid" value="' + response.data.yandex.scid + '">' +
+                        '<input type="hidden" name="CustomerNumber" value="' + response.data.yandex.CustomerNumber + '">' +
+                        '<input type="hidden" name="cps_email" value="' + response.data.yandex.cps_email + '">' +
+                        '<input type="hidden" name="sum" value="' + response.data.yandex.sum + '">' +
+                        '<input type="hidden" name="paymentType" value="' + response.data.yandex.paymentType + '">' +
+                        '<input type="hidden" name="shopSuccessURL" value="' + response.data.yandex.shopSuccessURL + '">' +
+                        '<input type="hidden" name="shopFailURL" value="' + response.data.yandex.shopFailURL + '">' +
+                        '<input type="hidden" name="MyField" id="MyField" value="' + response.data.yandex.MyField + '">' +
+                        '<input type="submit" class="btn btn-block-sm btn-primary" value="Перейти к оплате">' +
+                        '<a href="/" class="btn btn-block-sm btn-secondary float-md-left">Отменить</a>' +
+                        '</form>';
+
+
+                    $('#buttons-block').html(yandex);
+
+                } else {
+                    var error = '<div class="card-block text-danger">Не удалось загрузить информацию о платеже</div>';
+                    $('#card-container').html(error);
+                }
+            }).fail(function () {
+                var error = '<div class="card-block text-danger">Произошла ошибка загрузки данных о платеже</div>';
+                $('#card-container').html(error);
+            });
+
+        } else {
+            var error = '<div class="card-block text-danger">Данные для оплаты не верны</div>';
+            $('#card-container').html(error);
+        }
+
+    });
+</script>

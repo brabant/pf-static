@@ -3,10 +3,13 @@
 
 {% include head.html %}
 
+<!-- JQ SCRIPT -->
+<script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/jquery-3.3.1.min.js"></script>
+
 <body>
 
 <!-- HEADER -->
-{% if page.section == 'hello' %}
+{% if page.section == 'hello' or page.section == 'extra' %}
     <div class="pf-logo text-center py-3 mb-lg-7">pressfeed</div>
 {% elsif page.section == 'personal-brand' %}
     {% include header-personal-brand.html %}
@@ -20,12 +23,11 @@
 {{ content }}
 
 <!-- FOOTER -->
-{% unless page.section == 'vp' or page.section == 'hello' %}
+{% unless page.section == 'vp' or page.section == 'hello' or page.section == 'extra' %}
     {% include footer.html %}
 {% endunless %}
 
 <!-- SCRIPTS -->
-<script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/jquery-3.3.1.min.js"></script>
 <script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/bootstrap.min.js"></script>
 <script src="{{site.url}}{{site.baseurl}}/assets/js/vendors/slick.min.js"></script>
 <script src="{{site.url}}{{site.baseurl}}/assets/js/bundle.js?rev={{ site.time | date: '%s' }}"></script>
