@@ -8,14 +8,15 @@
     <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4HRKWG"  height="0" width="0"
             style="display:none;visibility:hidden"></iframe>
 </noscript>
+
+{% if page.url == '/s-hello.html' %}
 <script>
     (function () {
-        if (location.pathname === "/s-hello") {
-            let userID = localStorage.userID || null;
-            if (userID) {
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({'event': 'page_thankyou', 'userid': userID});
-            }
+        let userID = localStorage.userID || null;
+        if (userID) {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({'event': 'page_thankyou', 'userid': userID});
         }
     }());
 </script>
+{% endif %}

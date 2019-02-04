@@ -48,7 +48,6 @@ function getFormData(currentForm) {
     data.formGoogleSheetName = form.dataset.sheet || 'responses'; // default sheet name
     data.formGoogleSendEmail = form.dataset.email || ''; // no email by default
 
-    //console.log(data);
     return data;
 }
 
@@ -67,14 +66,14 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
             return false;
         }
     } else {
-        const url = event.target.action;  //
+        const url = event.target.action;
         const xhr = new XMLHttpRequest();
+
+        // sending to google sheet
         xhr.open('POST', url);
         // xhr.withCredentials = true;
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
         xhr.onreadystatechange = function () {
-            //console.log(xhr.status, xhr.statusText);
-            //console.log(xhr.responseText);
             $('.js-modal-form-vp').modal('show');
 
             setTimeout(function () {
@@ -85,6 +84,35 @@ function handleFormSubmit(event) {  // handles form submit withtout any jquery
         // url encode form data for sending as post data
         const encoded = Object.keys(data).map((k) => `${encodeURIComponent(k)}=${encodeURIComponent(data[k])}`).join('&');
         xhr.send(encoded);
+
+        // sending to our db
+        const dataOurs = {
+            phone: data['Телефон'],
+            company: '-',
+            position: '-',
+            name: 'Не зарегистрирован (внешний лендинг)',
+            email: '-',
+            utm_source: data['UTM-source'],
+            utm_medium: data['UTM-medium'],
+            utm_campaign: data['UTM-campaign'],
+            utm_content: window.location.href,
+        };
+        fetch('https://api.pressfeed.ru/vp-request/index', {
+            method: 'post',
+            mode: "cors",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(dataOurs),
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 200) {
+                    window.dataLayer = window.dataLayer || [];
+                    window.dataLayer.push({'event':'virt_pr_lead','email': dataOurs.phone});
+                }
+            })
+            .catch(error => console.error('Error sending on DB:', error));
     }
 }
 

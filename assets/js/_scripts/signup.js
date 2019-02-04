@@ -91,9 +91,6 @@ $(document).ready(function () {
                     dataType: "json",
                     success: function (response) {
                         localStorage.setItem('token', JSON.stringify(response.data));
-                        const metrikaParams = {myParam: 'Рега в кейсе', email: loginData.email,};
-                        const metrikaCallback = () => console.log('Запрос в Метрику отправлен');
-                        window.ym(27035592, 'reachGoal', 'RegistrationSuccess', metrikaParams, metrikaCallback());
                         window.location.pathname = '/s-hello.html';
                     },
                     error: function (response) {

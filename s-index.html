@@ -237,66 +237,64 @@ section: index
 
 <!-- Testimonials  -->
 <div class="container-fluid bg-light py-6">
-    <div class="row">
-        <div class="col-lg-10 col-xl-8 mx-auto">
-            <div class="text-center mb-5">
-                <h2 class="t-l">Как привлекать трафик и увеличивать продажи с помощью Pressfeed</h2>
-                <p>Истории и отзывы наших пользователей</p>
-            </div>
-            <div class="p-cases">
-                {% assign top-cases = site.cases | where: "homepage", "true" | sort: "date" | reverse %}
-                {% for case in top-cases limit:2 %}
-                <a class="p-cases-item"
-                   href="{{site.url}}{{site.baseurl}}{{case.url}}"
-                   style="background-image: url({{case.thumbnail}});">
-                    <div class="p-case-inner">
-                        <div class="p-case-header">
-                            <span class="text-uppercase mr-1">{{case.tag}}</span>
-                            <span class="float-md-right text-warning">{{case.company}}</span>
-                        </div>
-                        <h2 class="p-case-title">{{case.title}}</h2>
+    <div class="mx-auto">
+        <div class="text-center mb-5">
+            <h2 class="t-l">Как привлекать трафик и увеличивать продажи с помощью Pressfeed</h2>
+            <p>Истории и отзывы наших пользователей</p>
+        </div>
+        <div class="p-cases">
+            {% assign top-cases = site.cases | where: "homepage", "true" | sort: "date" | reverse %}
+            {% for case in top-cases limit:2 %}
+            <a class="p-cases-item"
+               href="{{site.url}}{{site.baseurl}}{{case.url}}"
+               style="background-image: url({{case.thumbnail}});">
+                <div class="p-case-inner">
+                    <div class="p-case-header">
+                        <span class="text-uppercase mr-1">{{case.tag}}</span>
+                        <span class="float-md-right text-warning">{{case.company}}</span>
                     </div>
-                    <div class="p-cases-back"></div>
-                </a>
-                {% endfor %}
-            </div>
-            <div class="text-center mb-6">
-                <a class="btn btn-outline-primary" href="s-cases.html">Больше кейсов</a>
-            </div>
-            <div class="pf-testimonials">
-                {% assign showOnInit = 16 %}
-                {% for testimonial in site.data.testimonials.testimonials.testimonials limit: showOnInit %}
-                <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
-                    <div class="pf-testimonial-text">{{testimonial.text}}</div>
-                    <div class="pf-testimonial-person">
-                        <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
-                        <div>
-                            <div class="text-black">{{testimonial.name}}</div>
-                            <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
-                        </div>
+                    <h2 class="p-case-title">{{case.title}}</h2>
+                </div>
+                <div class="p-cases-back"></div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="text-center mb-6">
+            <a class="btn btn-outline-primary" href="s-cases.html">Больше кейсов</a>
+        </div>
+        <div class="pf-testimonials">
+            {% assign showOnInit = 16 %}
+            {% for testimonial in site.data.testimonials.testimonials.testimonials limit: showOnInit %}
+            <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
+                <div class="pf-testimonial-text">{{testimonial.text}}</div>
+                <div class="pf-testimonial-person">
+                    <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
+                    <div>
+                        <div class="text-black">{{testimonial.name}}</div>
+                        <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
                     </div>
-                </a>
-                {% endfor %}
-            </div>
-            <div class="pf-testimonials js-pf-testimonials-extra d-none">
-                {% for testimonial in site.data.testimonials.testimonials.testimonials offset: showOnInit %}
-                <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
-                    <div class="pf-testimonial-text">{{testimonial.text}}</div>
-                    <div class="pf-testimonial-person">
-                        <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
-                        <div>
-                            <div class="text-black">{{testimonial.name}}</div>
-                            <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
-                        </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="pf-testimonials js-pf-testimonials-extra d-none">
+            {% for testimonial in site.data.testimonials.testimonials.testimonials offset: showOnInit %}
+            <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
+                <div class="pf-testimonial-text">{{testimonial.text}}</div>
+                <div class="pf-testimonial-person">
+                    <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
+                    <div>
+                        <div class="text-black">{{testimonial.name}}</div>
+                        <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
                     </div>
-                </a>
-                {% endfor %}
-            </div>
-            <div class="text-center">
-                <button class="btn btn-outline-primary cursor js-testimonials-more-button mt-3"
-                        type="button">Еще отзывы
-                </button>
-            </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <button class="btn btn-outline-primary cursor js-testimonials-more-button mt-3"
+                    type="button">Еще отзывы
+            </button>
         </div>
     </div>
 </div>
