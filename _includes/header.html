@@ -6,12 +6,12 @@
     </div>
     <div class="pf-header-section d-none d-lg-flex">
       <nav class="pf-header-nav">
-        <a class="pf-header-nav-item{% if page.section == 'jours' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-jours.html">Журналистам</a>
-        <a class="pf-header-nav-item{% if page.section == 'experts' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-experts.html">Экспертам</a>
-        <a class="pf-header-nav-item{% if page.section == 'cases' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-cases.html">Кейсы</a>
-        <a class="pf-header-nav-item js-plans-link{% if page.section == 'plans' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-plans.html">Тарифы</a>
+        <a class="pf-header-nav-item{% if page.url == '/s-jours.html' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-jours.html">Журналистам</a>
+        <a class="pf-header-nav-item{% if page.url == '/s-experts.html' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-experts.html">Экспертам</a>
+        <a class="pf-header-nav-item{% if page.url == '/s-cases.html' or page.layout == 'case' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-cases.html">Кейсы</a>
+        <a class="pf-header-nav-item js-plans-link{% if page.url == '/s-plans.html' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-plans.html">Тарифы</a>
         <a class="pf-header-nav-item" href="https://news.pressfeed.ru/">Блог</a>
-        <a class="pf-header-nav-item text-primary {% if page.section == 'vp' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-vp.html">Сделать все за меня</a>
+        <a class="pf-header-nav-item text-primary {% if page.url == '/s-vp.html' %} active{% endif %}" href="{{site.url}}{{site.baseurl}}/s-vp.html">Сделать все за меня</a>
       </nav>
     </div>
     <div class="pf-header-section d-none d-lg-flex">
