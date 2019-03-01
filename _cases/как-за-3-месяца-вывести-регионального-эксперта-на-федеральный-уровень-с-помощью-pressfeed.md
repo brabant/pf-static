@@ -13,7 +13,6 @@ tag:
 homepage: false
 thumbnail: "../assets/uploads/photo.png"
 date: 2019-03-01 08:29:34 +0000
-published: false
 
 ---
 ## Зачем психотерапевту-эксперту нужны публикации в популярных СМИ
