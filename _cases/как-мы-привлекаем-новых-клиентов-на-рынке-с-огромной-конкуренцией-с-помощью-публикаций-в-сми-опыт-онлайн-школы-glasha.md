@@ -10,7 +10,7 @@ company: Glasha
 tag:
 - Онлайн-школа иностранных языков
 homepage: false
-thumbnail: "../assets/uploads/глаша_заставка.jpg"
+thumbnail: "../assets/uploads/глаша_заставка-1.jpg"
 date: 2019-03-01 07:05:47 +0000
 
 ---
