@@ -11,7 +11,7 @@ company: Психотерапевт Люцина Лукьянова
 tag:
 - Личный бренд
 homepage: false
-thumbnail: ''
+thumbnail: "../assets/uploads/photo.png"
 date: 2019-03-01 08:29:34 +0000
 published: false
 
