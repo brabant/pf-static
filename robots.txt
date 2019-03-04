@@ -1,2 +1,13 @@
 User-agent: *
-Disallow:
+Disallow: *
+
+Allow: /
+Allow: /s-*
+Allow: /releases/*
+Allow: /all-queries
+Allow: /query/*
+Allow: /smi-catalog
+Allow: /smi/*
+
+Host: https://pressfeed.ru
+Sitemap: https://pressfeed.ru/sitemap.xml

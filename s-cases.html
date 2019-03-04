@@ -1,76 +1,369 @@
----
-section: cases
----
+<!DOCTYPE html>
+<html lang="ru">
 
+<head>
+
+    
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+    {'gtm.start': new Date().getTime(),event:'gtm.js'}
+);var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P4HRKWG');</script>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4HRKWG"  height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+
+
+    
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/app.css?rev=1551696790">
+
+    <title>Pressfeed. Кейсы — истории успеха пользователей Pressfeed </title>
+    <meta name="description"
+          content="Первый в России сервис журналистских запросов. Помогаем журналистам получать фактуру для статей. А экспертам и пиарщикам — PR и упоминания о компании в прессе">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Кейсы — истории успеха пользователей Pressfeed">
+    <meta property="og:description"
+          content="Первый в России сервис журналистских запросов. Помогаем журналистам быстро получать фактуру для статей. А экспертам и пиарщикам — упоминания в СМИ">
+    <meta property="og:image" content="https://pressfeed.ru/assets/img/og-thumb.png">
+    <meta property="og:url" content="https://pressfeed.ru/">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+
+<!-- JQ SCRIPT -->
+<script src="/assets/js/vendors/jquery-3.3.1.min.js"></script>
+
+<body>
+
+<!-- HEADER -->
+
+    <!-- Header -->
+<header class="pf-header">
+  <div class="pf-header-container">
+    <div class="pf-header-section d-flex align-items-stretch">
+      <a class="pf-logo" href="/s-index.html">pressfeed</a>
+    </div>
+    <div class="pf-header-section d-none d-lg-flex">
+      <nav class="pf-header-nav">
+        <a class="pf-header-nav-item" href="/s-jours.html">Журналистам</a>
+        <a class="pf-header-nav-item" href="/s-experts.html">Экспертам</a>
+        <a class="pf-header-nav-item active" href="/s-cases.html">Кейсы</a>
+        <a class="pf-header-nav-item js-plans-link" href="/s-plans.html">Тарифы</a>
+        <a class="pf-header-nav-item" href="https://news.pressfeed.ru/">Блог</a>
+        <a class="pf-header-nav-item text-primary " href="/s-vp.html">Сделать все за меня</a>
+      </nav>
+    </div>
+    <div class="pf-header-section d-none d-lg-flex">
+      <a class="btn btn-sm btn-warning" href="/signup">Регистрация</a>
+      <a class="btn btn-sm btn-link ml-2" href="/signin">Вход</a>
+    </div>
+    <a class="btn btn-sm btn-warning d-lg-none ml-auto mr-3" href="/signup">Регистрация</a>
+    <div class="hidden-lg-up burger" id="menu-mob-trigger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu-->
+<div class="menu-mob" id="menu-mob">
+  <nav class="d-flex flex-column h4 system align-items-center">
+    <a class="text-danger" href="/s-vp.html">Сделать все за меня</a>
+    <a href="/s-jours.html">Журналистам</a>
+    <a href="/s-experts.html">Экспертам</a>
+    <a href="/s-cases.html">Кейсы</a>
+    <a class="js-plans-link" href="/s-plans.html">Тарифы</a>
+    <a href="//news.pressfeed.ru/">Блог</a>
+    <a class="pt-4 text-black" href="/signin">Вход</a>
+  </nav>
+</div>
+
+
+<!-- CONTENT -->
 <!-- Featured Snips -->
-<section class="pf-section pf-section-first pf-section-zero pb-5 bg-cases">
+<div class="pt-7 py-5 bg-cases">
 
-    <div class="mb-3 mx-auto">
+    <div class="pt-3 mb-5 mx-auto">
         <div class="pf-punchline text-center">
-            <h1 class="mb-3">Истории успеха</h1>
+            <h1>Истории успеха</h1>
             <p class="f-lg col-md-10 mx-auto">Кейсы и отзывы пользователей&nbsp;— как продвигать бизнес с&nbsp;помощью
                 Pressfeed</p>
         </div>
     </div>
 
     <div class="p-cases">
-        {% assign cases = site.cases | sort: "date" | reverse %}
-        {% for case in cases limit:2 %}
+
+        
+        
         <a class="p-cases-item"
-           href="{{site.url}}{{site.baseurl}}{{case.url}}"
-           style="background-image: url({{case.thumbnail}});">
+           href="/cases/plesovskikh.html"
+           style="background-image: url('assets/uploads/thumb-case-5.jpg')">
             <div class="p-case-inner">
                 <div class="p-case-header">
-                    <span class="text-uppercase mr-1">{{case.tag}}</span>
-                    <span class="float-md-right text-warning">{{case.company}}</span>
+                    <span class="text-uppercase mr-1">Личный бренд</span>
+                    <span class="float-md-right text-warning">Адвокат Глеб Плесовских</span>
                 </div>
-                <h2 class="p-case-title">{{case.title}}</h2>
+                <h2 class="p-case-title">Опыт юриста: как с помощью публикаций в СМИ привлечь новых клиентов и увеличить трафик на личный сайт в 3 раза</h2>
             </div>
             <div class="p-cases-back"></div>
         </a>
-        {% endfor %}
+        
+        <a class="p-cases-item"
+           href="/cases/%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B8-%D0%B2-%D1%81%D0%BC%D0%B8-%D0%BC%D0%BE%D0%B3%D1%83%D1%82-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D0%BA%D0%B0%D1%82%D1%8C-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D0%B8-%D1%81%D0%BE%D0%B8%D1%81%D0%BA%D0%B0%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D1%80%D0%B0%D1%81%D1%81%D0%BA%D0%B0%D0%B7%D1%8B%D0%B2%D0%B0%D0%B5%D1%82-%D1%80%D0%B5%D0%BA%D1%80%D1%83%D1%82%D0%B8%D0%BD%D0%B3%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D1%81%D1%82%D0%B2%D0%BE.html"
+           style="background-image: url('../assets/uploads/hr_digital.jpg')">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Рекрутинг</span>
+                    <span class="float-md-right text-warning">DigitalHR</span>
+                </div>
+                <h2 class="p-case-title">Публикации в СМИ могут привлекать новых клиентов и соискателей: рассказывает рекрутинговое агентство </h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
     </div>
-</section>
+</div>
 
 <!-- Cite -->
 <section class="pf-section pf-section-zero py-6">
     <div class="row justify-content-center mx-0">
         <div class="col-sm-8">
-            <a class="pf-cite" href="{{site.url}}{{site.baseurl}}/cases/altsuite.html">
+            <a class="pf-cite mb-5" href="/cases/altsuite.html">
                 <p class="mb-3">Через Pressfeed мы&nbsp;вышли на&nbsp;отраслевые
                     издания, с&nbsp;которыми не&nbsp;были знакомы раньше. Каждый день мы&nbsp;получаем как минимум по&nbsp;одному
                     контакту c&nbsp;журналистами.</p>
                 <div class="f-sm">Стартап <cite>AltSuite</cite></div>
             </a>
-            <div class="text-center mt-5">
-                <a class="btn btn-lg btn-warning t-m px-5 py-3"
-                   href="https://pressfeed.ru/signup">Регистрация</a>
+            <div class="text-center">
+                <a class="btn btn-lg btn-warning t-m" href="https://pressfeed.ru/signup">Бесплатная регистрация</a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Rest Snips -->
-<section class="pf-section pf-section-zero bg-cases">
+<section class="pt-7 pb-5 bg-cases">
 
     <div class="p-cases">
-        {% for case in cases offset:2 %}
+        
             <a class="p-cases-item"
-           href="{{site.url}}{{site.baseurl}}{{case.url}}"
-           style="background-image: url({{site.url}}{{site.baseurl}}/{{case.thumbnail}})">
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D1%83%D0%B1%D0%B5%D0%B4%D0%B8%D1%82%D1%8C-%D0%BB%D0%B8%D0%B4%D0%B5%D1%80%D0%BE%D0%B2-%D1%80%D1%8B%D0%BD%D0%BA%D0%B0-%D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C-%D1%81-%D0%B2%D0%B0%D0%BC%D0%B8-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2-%D1%81%D0%BC%D0%B8-%D0%BE%D0%BF%D1%8B%D1%82-%D0%B8%D1%82-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8.html"
+           style="background-image: url(/../assets/uploads/handshake.jpg)">
             <div class="p-case-inner">
                 <div class="p-case-header">
-                    <span class="text-uppercase mr-1">{{case.tag}}</span>
-                    <span class="float-md-right text-warning">{{case.company}}</span>
+                    <span class="text-uppercase mr-1">Технологии</span>
+                    <span class="float-md-right text-warning">ИТ-компания CUSTIS</span>
                 </div>
-                <h2 class="p-case-title">{{case.title}}</h2>
+                <h2 class="p-case-title">Как убедить лидеров рынка начать работать с вами с помощью публикаций в СМИ: опыт ИТ-компании</h2>
             </div>
             <div class="p-cases-back"></div>
         </a>
-        {% endfor %}
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D1%81%D1%82%D0%B0%D1%80%D1%82%D0%B0%D0%BF%D1%83-%D1%83%D0%B2%D0%B5%D0%BB%D0%B8%D1%87%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D0%B0%D1%80%D1%82%D0%BD%D0%B5%D1%80%D0%BE%D0%B2-%D0%B2-15-%D1%80%D0%B0%D0%B7-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-pr-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D0%B2%D1%81%D0%B5%D0%B3%D0%BE-%D0%B7%D0%B0-%D0%BE%D0%B4%D0%B8%D0%BD-%D0%B3%D0%BE%D0%B4.html"
+           style="background-image: url(/assets/uploads/IM_18_15.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Технологии</span>
+                    <span class="float-md-right text-warning">Sarafan</span>
+                </div>
+                <h2 class="p-case-title">Как стартапу увеличить количество партнеров в 15 раз с помощью PR-инструментов всего за один год</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/evodesk.html"
+           style="background-image: url(/../assets/uploads/delovye_igry.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1"></span>
+                    <span class="float-md-right text-warning">EvoDesk</span>
+                </div>
+                <h2 class="p-case-title">Если вы запустили стартап: как собрать базу лояльных журналистов, чтобы пригласить их на презентацию нового продукта</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B1%D0%B8%D1%82%D1%8C%D1%81%D1%8F-100-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8-%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B8%D1%80-%D0%BA-%D0%BC%D0%BE%D0%BC%D0%B5%D0%BD%D1%82%D1%83-%D1%81%D0%B4%D0%B0%D1%87%D0%B8-%D0%BD%D0%B0-%D0%BF%D0%B0%D0%B4%D0%B0%D1%8E%D1%89%D0%B5%D0%BC-%D1%80%D1%8B%D0%BD%D0%BA%D0%B5-%D0%BD%D0%B5%D0%B4%D0%B2%D0%B8%D0%B6%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2-%D1%81%D0%BC%D0%B8-%D0%BE%D0%BF%D1%8B%D1%82-%D0%B4%D0%B5%D0%B2%D0%B5%D0%BB%D0%BE%D0%BF%D0%B5%D1%80%D0%B0.html"
+           style="background-image: url(/../assets/uploads/феникс_инвест.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Недвижимость</span>
+                    <span class="float-md-right text-warning">Феникс-Инвест</span>
+                </div>
+                <h2 class="p-case-title">Как добиться 100% продажи квартир к моменту сдачи на падающем рынке недвижимости с помощью публикаций в СМИ. Опыт девелопера</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D0%B2%D1%8B%D0%B9%D1%82%D0%B8-%D0%BD%D0%B0-%D1%80%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D1%80%D1%8B%D0%BD%D0%BA%D0%B8-%D0%B8-%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B8%D1%82%D1%8C-%D1%81%D1%82%D0%B0%D0%B1%D0%B8%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA-%D0%BB%D0%B8%D0%B4%D0%BE%D0%B2-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2-%D1%81%D0%BC%D0%B8.html"
+           style="background-image: url(/../assets/uploads/Skyscrapers-towering-over-the-city.jpeg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Технологии</span>
+                    <span class="float-md-right text-warning">INTRO Technology Rus</span>
+                </div>
+                <h2 class="p-case-title">Как выйти на региональные рынки и обеспечить стабильный поток лидов с помощью публикаций в СМИ</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D0%B7%D0%B0-3-%D0%BC%D0%B5%D1%81%D1%8F%D1%86%D0%B0-%D0%B2%D1%8B%D0%B2%D0%B5%D1%81%D1%82%D0%B8-%D1%80%D0%B5%D0%B3%D0%B8%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B3%D0%BE-%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82%D0%B0-%D0%BD%D0%B0-%D1%84%D0%B5%D0%B4%D0%B5%D1%80%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D1%83%D1%80%D0%BE%D0%B2%D0%B5%D0%BD%D1%8C-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-pressfeed.html"
+           style="background-image: url(/../assets/uploads/photo.png)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Личный бренд</span>
+                    <span class="float-md-right text-warning">Психотерапевт Люцина Лукьянова</span>
+                </div>
+                <h2 class="p-case-title">Как за 3 месяца вывести регионального эксперта на федеральный уровень с помощью Pressfeed</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D1%87%D1%8C-%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%BE%D0%B2-%D0%B2-%D0%BA%D1%80%D0%B8%D0%BF%D1%82%D0%BE%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D1%8B%D1%85-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2-%D1%81%D0%BC%D0%B8-%D0%B8-%D0%B1%D0%B5%D0%B7-%D0%B2%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B2-%D1%80%D0%B5%D0%BA%D0%BB%D0%B0%D0%BC%D1%83.html"
+           style="background-image: url(/../assets/uploads/iStock-498398760.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1"></span>
+                    <span class="float-md-right text-warning">Smart Crypto</span>
+                </div>
+                <h2 class="p-case-title">Как привлечь инвесторов в криптопроект с помощью бесплатных публикаций в СМИ и без вложений в рекламу</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D0%BC%D1%8B-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D0%BA%D0%B0%D0%B5%D0%BC-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D0%BE%D0%B2-%D0%BD%D0%B0-%D1%80%D1%8B%D0%BD%D0%BA%D0%B5-%D1%81-%D0%BE%D0%B3%D1%80%D0%BE%D0%BC%D0%BD%D0%BE%D0%B9-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B5%D0%B9-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2-%D1%81%D0%BC%D0%B8-%D0%BE%D0%BF%D1%8B%D1%82-%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD-%D1%88%D0%BA%D0%BE%D0%BB%D1%8B-glasha.html"
+           style="background-image: url(/../assets/uploads/глаша_заставка-2.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Онлайн-школа</span>
+                    <span class="float-md-right text-warning">Glasha</span>
+                </div>
+                <h2 class="p-case-title">Как мы привлекаем новых клиентов на рынке с огромной конкуренцией с помощью публикаций в СМИ: опыт онлайн-школы Glasha</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/gelateria-plombir.html"
+           style="background-image: url(/assets/uploads/bd56801b-3cd1-45b4-97e6-e191103e0bbb_670x0_resize.png)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">франшиза</span>
+                    <span class="float-md-right text-warning">Gelateria Plombir</span>
+                </div>
+                <h2 class="p-case-title">Как публикации в СМИ помогли нам продавать франшизу, увеличить трафик на сайт в 10 раз и нарастить бизнес в 1,5 раза за год</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/%D0%BA%D0%B0%D0%BA-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B0%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6%D0%B8-%D1%81-%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E-%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D0%B9-%D0%B2-%D1%82%D0%BE%D0%BF%D0%BE%D0%B2%D1%8B%D1%85-%D1%81%D0%BC%D0%B8-%D0%B5%D1%81%D0%BB%D0%B8-%D0%B2%D0%B0%D1%88%D0%B0-%D0%B0%D1%83%D0%B4%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D0%BF%D0%BE%D0%BB%D0%BE%D0%B2%D0%B8%D0%BD%D0%B0-%D0%B6%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B8.html"
+           style="background-image: url(/assets/uploads/alfa.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Автодилер</span>
+                    <span class="float-md-right text-warning">АвтоСпецЦентр</span>
+                </div>
+                <h2 class="p-case-title">Как получать продажи с помощью публикаций в топовых СМИ, если ваша аудитория — половина жителей России</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/volkov.html"
+           style="background-image: url(/assets/uploads/Волков-1400.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">digital-агентство</span>
+                    <span class="float-md-right text-warning">Digital.Tools</span>
+                </div>
+                <h2 class="p-case-title">Как увеличить количество заявок в 10 раз с помощью бесплатных публикаций в СМИ. Опыт агентства Digital.Tools</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/osom.html"
+           style="background-image: url(/assets/uploads/thumb-case-3.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Торговля</span>
+                    <span class="float-md-right text-warning">ОСОМ Кофе</span>
+                </div>
+                <h2 class="p-case-title">Как бесплатно продвигать малый бизнес с помощью публикаций в СМИ. Опыт интернет-магазина кофе</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/ruc.html"
+           style="background-image: url(/assets/uploads/thumb-case-2.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">Наука</span>
+                    <span class="float-md-right text-warning">Российский университет кооперации</span>
+                </div>
+                <h2 class="p-case-title">Как продать СМИ экспертное мнение, когда нет продукта и ничего крутого не происходит</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/altsuite.html"
+           style="background-image: url(/assets/uploads/thumb-case-1.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">технологии</span>
+                    <span class="float-md-right text-warning">HR-стартап AltSuite</span>
+                </div>
+                <h2 class="p-case-title">У вас новый для рынка продукт. Как быстро рассказать о нем целевой аудитории</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
+            <a class="p-cases-item"
+           href="/cases/softline.html"
+           style="background-image: url(/assets/uploads/thumb-case-4.jpg)">
+            <div class="p-case-inner">
+                <div class="p-case-header">
+                    <span class="text-uppercase mr-1">технологии</span>
+                    <span class="float-md-right text-warning">IT-компания Softline</span>
+                </div>
+                <h2 class="p-case-title">Как начать публиковаться в региональных СМИ и за 10 месяцев увеличить МедиаИндекс в 14 раз, где бы ни находился ваш PR-специалист</h2>
+            </div>
+            <div class="p-cases-back"></div>
+        </a>
+        
         <a class="p-cases-item"
            href="s-story.html"
-           style="background-image: url({{site.url}}{{site.baseurl}}/assets/img/bocharsky.jpg);">
+           style="background-image: url(/assets/img/bocharsky.jpg);">
             <div class="p-case-inner">
                 <div class="p-case-header">
                     <span class="text-uppercase mr-1">История</span>
@@ -88,14 +381,13 @@ section: cases
 <section class="pf-section pf-section-zero py-6">
     <div class="row justify-content-center mx-0">
         <div class="col-sm-8">
-            <a class="pf-cite" href="{{site.url}}{{site.baseurl}}/cases/osom.html">
+            <a class="pf-cite mb-5" href="/cases/osom.html">
                 <p class="mb-3">Я стараюсь отслеживать запросы журналистов на Pressfeed каждый день. Это очень удобно:
                     сразу видеть все, что интересует деловые медиа, искать любые варианты для упоминаний.</p>
                 <div class="f-sm">Магазин <cite>«ОСОМ Кофе»</cite></div>
             </a>
-            <div class="text-center mt-5">
-                <a class="btn btn-lg btn-warning t-m px-5 py-3"
-                   href="https://pressfeed.ru/signup">Регистрация</a>
+            <div class="text-center">
+                <a class="btn btn-lg btn-warning t-m" href="https://pressfeed.ru/signup">Бесплатная регистрация</a>
             </div>
         </div>
     </div>
@@ -105,36 +397,353 @@ section: cases
 <section class="pf-section-zero py-7 bg-light">
     <h2 class="t-l text-center mb-5">Соцсети про&nbsp;Pressfeed</h2>
     <div class="pf-testimonials">
-        {% assign showOnInit = 8 %}
-        {% for testimonial in site.data.testimonials.testimonials.testimonials limit: showOnInit %}
-        <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
-            <div class="pf-testimonial-text">{{testimonial.text}}</div>
+        
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/lilian.pertenava/posts/10152926952969375" target="_blank">
+            <div class="pf-testimonial-text">Вышел комментарий в The Village. Запрос получен и отправлен полностью через Pressfeed. Люблю быть early adopter.</div>
             <div class="pf-testimonial-person">
-                <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
+                <img width="60" height="60" src="/assets/uploads/1.jpg">
                 <div>
-                    <div class="text-black">{{testimonial.name}}</div>
-                    <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
+                    <div class="text-black">Liliana Pertenava</div>
+                    <div class="t-s no-wrap text-primary f-semi">Runa Capital</div>
                 </div>
             </div>
         </a>
-        {% endfor %}
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/alena.vladimirskaya/posts/10204207454599487" target="_blank">
+            <div class="pf-testimonial-text">Крутой сервис. Счастливы все: пиарщики выполняют свой основной KPI, у журналистов много экспертов.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/2.jpg">
+                <div>
+                    <div class="text-black">Алёна Владимирская</div>
+                    <div class="t-s no-wrap text-primary f-semi">Антирабство</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/dmkryukov/posts/815931348463330" target="_blank">
+            <div class="pf-testimonial-text">Pressfeed.ru обещает стать прорывом в отношениях пиарщиков и журналистов и облегчить жизнь и тех, и других.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/3.jpg">
+                <div>
+                    <div class="text-black">Дмитрий Крюков</div>
+                    <div class="t-s no-wrap text-primary f-semi">Коммерсантъ</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/nazarova.a.ksenia/posts/769943816392166" target="_blank">
+            <div class="pf-testimonial-text">Решила отправить запрос на Pressfeed и получила 40 (!!!) откликов за сутки. Итог: контакты, которых хватит на год вперед.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/4.jpg">
+                <div>
+                    <div class="text-black">Ksenia Nazarova</div>
+                    <div class="t-s no-wrap text-primary f-semi">Сбербанк</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/yakoreva/posts/1002516023098441?comment_id=1002516916431685&comment_tracking=%7B%22tn%22%3A%22R7%22%7D" target="_blank">
+            <div class="pf-testimonial-text">Макросы и Presfeed скоро заменят всех нас.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/5.jpg">
+                <div>
+                    <div class="text-black">Влад Коваленко</div>
+                    <div class="t-s no-wrap text-primary f-semi">РБК</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/polina.rusyaeva/posts/10204615022487918" target="_blank">
+            <div class="pf-testimonial-text">Видела очередное обсуждение &laquo;Как бесплатно попасть в топовые СМИ&raquo;. Пройдите по ссылке, и будет вам счастье. #pressfeed</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/6.jpg">
+                <div>
+                    <div class="text-black">Polina Rusyaeva-Tsybizova</div>
+                    <div class="t-s no-wrap text-primary f-semi">ФРИИ</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/TeoPopov/posts/798027080233617" target="_blank">
+            <div class="pf-testimonial-text">Возможно, лучший проект нашего цеха за 2015 год.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/7.jpg">
+                <div>
+                    <div class="text-black">Teodor Popov</div>
+                    <div class="t-s no-wrap text-primary f-semi">Битрикс</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/lilian.pertenava/posts/10152926952969375?comment_id=10152927911864375&comment_tracking=%7B%22tn%22%3A%22R0%22%7D" target="_blank">
+            <div class="pf-testimonial-text">Тоже заглядываю каждый день туда.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/8.jpg">
+                <div>
+                    <div class="text-black">Ilya Grabovskiy</div>
+                    <div class="t-s no-wrap text-primary f-semi">Яндекс</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://twitter.com/gaidar/status/542697436851208192" target="_blank">
+            <div class="pf-testimonial-text">Пример очень простого, очень полезного проекта. Журналист научился программировать, чтобы его сделать.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/9.jpg">
+                <div>
+                    <div class="text-black">Gaidar Magdanurov</div>
+                    <div class="t-s no-wrap text-primary f-semi">Acronis</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/permalink.php?story_fbid=823243411072849&id=100001615940529" target="_blank">
+            <div class="pf-testimonial-text">Реальный помощник журналиста! За два дня получила 43 ответа на свой запрос. Опрос пришлось закрыть пораньше.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/10.jpg">
+                <div>
+                    <div class="text-black">Юлия Фуколова</div>
+                    <div class="t-s no-wrap text-primary f-semi">Harvard Business Review &ndash; Россия</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/bocharsky/posts/10153001807812474?comment_id=10153001847267474&comment_tracking=%7B%22tn%22%3A%22R0%22%7D" target="_blank">
+            <div class="pf-testimonial-text">Когда сервис станет платным, надо как-то уговорить директора вносить оплату.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/11.jpg">
+                <div>
+                    <div class="text-black">Kim Ekaterina</div>
+                    <div class="t-s no-wrap text-primary f-semi"></div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/Jana.Kharina/posts/851260178245624" target="_blank">
+            <div class="pf-testimonial-text">Затестила Pressfeed как журналист (как пиарщик уже использовала &ndash; вышло несколько комментариев). 27 ответов!</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/12.jpg">
+                <div>
+                    <div class="text-black">Яна Харина</div>
+                    <div class="t-s no-wrap text-primary f-semi">Экспофорум</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/dafyas/posts/10205927778421404" target="_blank">
+            <div class="pf-testimonial-text">Вышла первая публикация с упоминанием Radario благодаря pressfeed.ru. Через пару дней выйдет еще две!</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/13.jpg">
+                <div>
+                    <div class="text-black">Дария Бедная</div>
+                    <div class="t-s no-wrap text-primary f-semi">Radario</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/groups/pressuha/permalink/794172687323393/" target="_blank">
+            <div class="pf-testimonial-text">За две недели я познакомилась с 5 журналистами, изучила возможности 5 изданий.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/14.jpg">
+                <div>
+                    <div class="text-black">Lada Shcherbakova</div>
+                    <div class="t-s no-wrap text-primary f-semi">PR & Media consultant</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/michael.akimov/posts/10205448799758230" target="_blank">
+            <div class="pf-testimonial-text">Отправил запрос, и буквально за сутки насыпается около 10-20 комментариев. Несколько статей уже опубликовано.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/15.jpg">
+                <div>
+                    <div class="text-black">Михаил Акимов</div>
+                    <div class="t-s no-wrap text-primary f-semi">Rabotnik.ru</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/prsfd/posts/301489270061262" target="_blank">
+            <div class="pf-testimonial-text">За пару дней с Pressfeed мы успели познакомиться с редакторами ключевых для нас изданий и получить публикации.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/16.jpg">
+                <div>
+                    <div class="text-black">Ekaterina Ryzhkova</div>
+                    <div class="t-s no-wrap text-primary f-semi">Supl.biz</div>
+                </div>
+            </div>
+        </a>
+        
     </div>
     <div class="pf-testimonials js-pf-testimonials-extra d-none">
-        {% for testimonial in site.data.testimonials.testimonials.testimonials offset: showOnInit %}
-        <a class="pf-testimonial" href="{{testimonial.link}}" target="_blank">
-            <div class="pf-testimonial-text">{{testimonial.text}}</div>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/yakoreva/posts/1002516023098441" target="_blank">
+            <div class="pf-testimonial-text">В цейтноте можешь не сообразить, что именно этот пиарщик может помочь. Так что полезная и удобная штука.</div>
             <div class="pf-testimonial-person">
-                <img width="60" height="60" src="{{site.url}}{{site.baseurl}}/{{testimonial.avatar}}">
+                <img width="60" height="60" src="/assets/uploads/17.jpg">
                 <div>
-                    <div class="text-black">{{testimonial.name}}</div>
-                    <div class="t-s no-wrap text-primary f-semi">{{testimonial.company}}</div>
+                    <div class="text-black">Настасья Якорева</div>
+                    <div class="t-s no-wrap text-primary f-semi">РБК</div>
                 </div>
             </div>
         </a>
-        {% endfor %}
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/anna.sokolova.5/posts/872129559498948" target="_blank">
+            <div class="pf-testimonial-text">За неделю получила несколько десятков откликов от пиарщиков — ко многим я сама бы не додумалась обратиться.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/18.jpg">
+                <div>
+                    <div class="text-black">Anna Sokolova</div>
+                    <div class="t-s no-wrap text-primary f-semi">The Village</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/grigory.lugovoy/posts/10152986716439171" target="_blank">
+            <div class="pf-testimonial-text">Если вижу запрос, который не подходит мне, но знаю, кому он интересен, обязательно отправляю этому человеку.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/19.jpg">
+                <div>
+                    <div class="text-black">Grigory Lugovoy</div>
+                    <div class="t-s no-wrap text-primary f-semi">Biletix.ru</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/alexey.khodorych/posts/4801521333702" target="_blank">
+            <div class="pf-testimonial-text">Пиарщики подключаются к потоку актуальных медиазапросов и реагируют на то, где им действительно есть, что предложить.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/20.jpg">
+                <div>
+                    <div class="text-black">Alexey Khodorych</div>
+                    <div class="t-s no-wrap text-primary f-semi">РБК</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/bocharsky/posts/10152990345202474?comment_id=10152990754127474&comment_tracking=%7B%22tn%22%3A%22R1%22%7D" target="_blank">
+            <div class="pf-testimonial-text">Ответы приходят очень быстро. Очень.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/21.jpg">
+                <div>
+                    <div class="text-black">Антонина Павлова</div>
+                    <div class="t-s no-wrap text-primary f-semi">Журнал &laquo;Генеральный директор&raquo;</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/pertsiya/posts/10152947915143594" target="_blank">
+            <div class="pf-testimonial-text">Теперь каждый из вас в два клика может попасть в газету! В качестве эксперта.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/22.jpg">
+                <div>
+                    <div class="text-black">Val Pertsiya</div>
+                    <div class="t-s no-wrap text-primary f-semi">Vitagramma</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/mikevinogradov/posts/10205492849910186" target="_blank">
+            <div class="pf-testimonial-text">Крошечный комментарий на Pressfeed, похоже, превратился в целое интервью.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/23.jpg">
+                <div>
+                    <div class="text-black">Michael Vinogradov</div>
+                    <div class="t-s no-wrap text-primary f-semi">Таксилёт</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/prsfd/posts/798068800403304?comment_id=798518267025024&reply_comment_id=844271639116353" target="_blank">
+            <div class="pf-testimonial-text">Мой каждый второй комментарий берется в работу. Просто материал должен быть уникальным, мне кажется.</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/24.jpg">
+                <div>
+                    <div class="text-black">Кирилл Уютнов</div>
+                    <div class="t-s no-wrap text-primary f-semi">photojourneys.ru</div>
+                </div>
+            </div>
+        </a>
+        
+        <a class="pf-testimonial" href="https://www.facebook.com/groups/pressuha/permalink/791627250911270/?comment_id=792296640844331&comment_tracking=%7B%22tn%22%3A%22R%22%7D" target="_blank">
+            <div class="pf-testimonial-text">Бомба! Спасибо</div>
+            <div class="pf-testimonial-person">
+                <img width="60" height="60" src="/assets/uploads/25.jpg">
+                <div>
+                    <div class="text-black">Yana Zadorozhnaya</div>
+                    <div class="t-s no-wrap text-primary f-semi">Organic PR</div>
+                </div>
+            </div>
+        </a>
+        
     </div>
     <div class="text-center">
         <button class="btn btn-outline-primary cursor js-testimonials-more-button mt-3" type="button">Еще отзывы
         </button>
     </div>
 </section>
+
+<!-- FOOTER -->
+
+    <!-- Footer -->
+<footer id="contact" class="pf-footer">
+
+    <div class="container d-flex flex-column justify-content-center align-items-center text-center">
+
+        
+            <h2 class="t-l text-center mb-5">Начать работу с Pressfeed</h2>
+            <div class="text-center mb-5">
+                <a class="btn btn-lg btn-warning t-m" href="https://pressfeed.ru/signup">
+                    Бесплатная регистрация
+                </a>
+            </div>
+        
+
+        <div class="text-black">
+            Остались вопросы?<br class="d-block d-sm-none"> Свяжитесь с&nbsp;нами:<br>
+            <a href="tel:+7-495-120-80-19">+7 (495) 120-80-19</a>, <a href="mailto:sales@pressfeed.ru">sales@pressfeed.ru</a><br>
+            Объясним, поможем.
+        </div>
+
+        <div class="social-media-list">
+            <div class="mt-3"><a class="icon-telegram mr-2" href="https://t-do.ru/pressfeed" target="_blank">
+                    <svg width="32" height="32" viewBox="-1 -1 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none">
+                            <circle stroke="#000" cx="14.781" cy="14.781" r="14.781"/>
+                            <path d="M20.664 11.365c-1.029 2.874-2.383 6.969-3.555 9.931-1.678 4.242-3.223.447-3.223.447l-2.03-4.061s-1.806-.779-3.685-1.65c-3.569-1.654-1.058-3.068-1.058-3.068l11.272-4.004s3.837-1.948 2.278 2.405z"
+                                  fill="#000"/>
+                        </g>
+                    </svg>
+                </a><a class="icon-facebook mr-2" href="https://www.facebook.com/prsfd" target="_blank">
+                    <svg width="32" height="32" viewBox="-1 -1 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none">
+                            <circle stroke="#000" cx="14.981" cy="14.981" r="14.981"/>
+                            <path d="M16.01 22.472l.025-7.395h1.98l.273-2.479h-2.253c-.03-2.065.054-2.416.751-2.617.846.029 1.707 0 1.707 0v-2.204c-2.284-.753-5.158-.303-4.984 4.82h-1.98v2.479h1.912l-.009 7.395 2.578.001z"
+                                  fill="#000"/>
+                        </g>
+                    </svg>
+                </a><a class="icon-vk mr-2" href="https://vk.com/prsfd" target="_blank">
+                    <svg width="32" height="32" viewBox="-1 -1 32 32" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="none">
+                            <circle stroke="#000" cx="15" cy="15" r="15"/>
+                            <path d="M11.822 12.052c.429.056 1.17-.081.884 2.948-.014.147-.345 1.395-1.399-.295-.26-.417-1.272-2.939-1.62-2.948-1.169-.032-2.315-.08-2.725.147-.373.208.505 1.951 1.988 4.275 1.213 1.901 2.498 3.386 4.713 3.759.414.041 1.505.091 1.841-.074.234-.115-.05-1.763.736-1.916.354-.069 1.698 1.712 2.209 1.916.31.124.994.17 1.694.147.757-.024 1.611.066 1.694-.442.185-1.137-2.282-2.614-2.357-3.317-.053-.504.903-1.433 1.399-2.137.605-.859 1.261-1.892.884-2.211-.187-.158-.906-.151-1.62-.147-.73.004-1.453.008-1.62.074-.155.061-.504.902-.957 1.769-.513.98-1.146 1.923-1.547 1.916-.519-.008-.399-1.62-.368-2.801.02-.784-.107-1.029-.221-1.106-.277-.186-1.031-.368-1.031-.368s-2.254-.171-2.577.811z"
+                                  fill="#000"/>
+                        </g>
+                    </svg>
+                </a></div>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="/assets/js/vendors/bootstrap.min.js"></script>
+<script src="/assets/js/vendors/slick.min.js"></script>
+<script src="/assets/js/bundle.js?rev=1551696790"></script>
+
+</body>
+
+</html>
