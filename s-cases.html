@@ -21,7 +21,7 @@ section: cases
 
         {% assign cases = site.cases | sort: "date" | reverse %}
         {% for case in cases limit:2 %}
-        <a class="p-cases-item"
+        <a class="p-cases-item js-bg"
            href="{{site.url}}{{site.baseurl}}{{case.url}}"
            style="background-image: url('{{case.thumbnail}}')">
             <div class="p-case-inner">
@@ -59,7 +59,7 @@ section: cases
 
     <div class="p-cases">
         {% for case in cases offset:2 %}
-            <a class="p-cases-item"
+            <a class="p-cases-item js-bg"
            href="{{site.url}}{{site.baseurl}}{{case.url}}"
            style="background-image: url({{case.thumbnail}})">
             <div class="p-case-inner">
@@ -72,7 +72,7 @@ section: cases
             <div class="p-cases-back"></div>
         </a>
         {% endfor %}
-        <a class="p-cases-item"
+        <a class="p-cases-item js-bg"
            href="s-story.html"
            style="background-image: url({{site.url}}{{site.baseurl}}/assets/img/bocharsky.jpg);">
             <div class="p-case-inner">
@@ -141,3 +141,15 @@ section: cases
         </button>
     </div>
 </section>
+
+<script>
+    var bgs = document.querySelectorAll('.js-bg')
+    for (var x = 0; x < bgs.length; x++ ) {
+        var target = bgs[x].style.backgroundImage;
+        if (target.indexOf('../assets/uploads/') !== -1 ) {
+            var newBg = target.slice(0,5) + target.slice(8);
+            bgs[x].style.backgroundImage = newBg;
+        }
+
+    }
+</script>
