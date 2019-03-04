@@ -266,7 +266,7 @@ section: personal-brand
         {% for case in site.cases limit:4 %}
         <a class="p-cases-item js-bg"
            href="{{site.url}}{{site.baseurl}}{{case.url}}"
-           style="background-image: url({{site.url}}{{site.baseurl}}/{{case.thumbnail}});">
+           style="background-image: url({{case.thumbnail}});">
             <div class="p-case-inner">
                 <div class="p-case-header">
                     <span class="text-uppercase mr-1">{{case.tag}}</span>
