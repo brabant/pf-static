@@ -246,7 +246,7 @@ section: index
         <div class="p-cases">
             {% assign top-cases = site.cases | where: "homepage", "true" | sort: "date" | reverse %}
             {% for case in top-cases limit:2 %}
-            <a class="p-cases-item"
+            <a class="p-cases-item js-bg"
                href="{{site.url}}{{site.baseurl}}{{case.url}}"
                style="background-image: url({{case.thumbnail}});">
                 <div class="p-case-inner">

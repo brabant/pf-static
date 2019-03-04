@@ -264,7 +264,7 @@ section: personal-brand
     </div>
     <div class="p-cases mb-5 mx-auto">
         {% for case in site.cases limit:4 %}
-        <a class="p-cases-item"
+        <a class="p-cases-item js-bg"
            href="{{site.url}}{{site.baseurl}}{{case.url}}"
            style="background-image: url({{site.url}}{{site.baseurl}}/{{case.thumbnail}});">
             <div class="p-case-inner">
@@ -433,3 +433,16 @@ section: personal-brand
     </div>
 
 </section>
+
+<script>
+    /* Change links to images - for github preview site only */
+    if (window.location.host === 'fkolesnik.github.io') {
+        var bgs = document.querySelectorAll('.js-bg')
+        for (var x = 0; x < bgs.length; x++) {
+            var target = bgs[x].style.backgroundImage;
+            if (target.indexOf('../assets/uploads/') !== -1) {
+                bgs[x].style.backgroundImage = target.slice(0, 5) + target.slice(8);
+            }
+        }
+    }
+</script>
