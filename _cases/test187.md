@@ -8,6 +8,8 @@ thumbnail: "../assets/uploads/delovye_igry.jpg"
 date: 2019-03-04 11:20:39 +0000
 
 ---
-dsdsdd
+dsdsd
 
-![](../assets/uploads/image4-12.png)
+fdfdfdf
+
+![](../assets/uploads/image8-7.png)
