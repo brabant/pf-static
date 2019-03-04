@@ -23,7 +23,7 @@ section: cases
         {% for case in cases limit:2 %}
         <a class="p-cases-item"
            href="{{site.url}}{{site.baseurl}}{{case.url}}"
-           style="background-image: url('/{{case.thumbnail}}')">
+           style="background-image: url('{{case.thumbnail}}')">
             <div class="p-case-inner">
                 <div class="p-case-header">
                     <span class="text-uppercase mr-1">{{case.tag}}</span>
