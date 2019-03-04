@@ -15,7 +15,7 @@ layout: default
         </div>
     </div>
     <div class="pf-layout-case">
-        <div class="pf-layout-case-left">&nbsp;1</div>
+        <div class="pf-layout-case-left">&nbsp;</div>
         <div class="pf-layout-case-center">
 
             <div class="pf-case-post">
@@ -53,7 +53,7 @@ layout: default
                 {% if case.url != page.url %}
                 <a class="p-cases-item sm"
                    href="{{site.url}}{{site.baseurl}}{{case.url}}"
-                   style="background-image: url('../{{case.thumbnail}}')">
+                   style="background-image: url('{{case.thumbnail}}')">
                     <div class="p-case-inner">
                         <div class="p-case-header">
                             <span class="text-uppercase mr-1">{{case.tag}}</span>
