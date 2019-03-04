@@ -143,14 +143,14 @@ section: cases
 </section>
 
 <script>
+    /* Change links to images - for github preview site only */
     if (window.location.host === 'fkolesnik.github.io') {
-    var bgs = document.querySelectorAll('.js-bg')
-    for (var x = 0; x < bgs.length; x++ ) {
-        var target = bgs[x].style.backgroundImage;
-        if (target.indexOf('../assets/uploads/') !== -1 ) {
-            var newBg = target.slice(0,5) + target.slice(8);
-            bgs[x].style.backgroundImage = newBg;
+        var bgs = document.querySelectorAll('.js-bg')
+        for (var x = 0; x < bgs.length; x++) {
+            var target = bgs[x].style.backgroundImage;
+            if (target.indexOf('../assets/uploads/') !== -1) {
+                bgs[x].style.backgroundImage = target.slice(0, 5) + target.slice(8);
+            }
         }
-    }
     }
 </script>
