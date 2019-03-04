@@ -9,7 +9,7 @@ company: ГК «АвтоСпецЦентр»
 tag:
 - автодилер
 homepage: false
-thumbnail: assets/uploads/alfa.jpg
+thumbnail: ../assets/uploads/alfa.jpg
 published: false
 
 ---

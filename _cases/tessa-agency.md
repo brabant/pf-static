@@ -9,7 +9,7 @@ company: 'Tessa Agency'
 tag:
 - пластиковые окна
 homepage: false
-thumbnail: assets/uploads/filonenko-1400.jpg
+thumbnail: ../assets/uploads/filonenko-1400.jpg
 published: false
 
 ---

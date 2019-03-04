@@ -8,7 +8,7 @@ company: Gelateria Plombir
 tag:
 - франшиза
 homepage: true
-thumbnail: assets/uploads/bd56801b-3cd1-45b4-97e6-e191103e0bbb_670x0_resize.png
+thumbnail: ../assets/uploads/bd56801b-3cd1-45b4-97e6-e191103e0bbb_670x0_resize.png
 
 ---
 В 2018 году сеть Gelateria Plombir насчитывает около 200 торговых точек в 6 странах (Россия, Казахстан, Киргизия, Беларусь, Грузия, Таджикистан). Второй год подряд мы входим в рейтинг самых прибыльных российских франшиз по версии Forbes: в 2018 году мы заняли в рейтинге шестое место.

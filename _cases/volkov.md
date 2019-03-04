@@ -12,7 +12,7 @@ company: Digital.Tools
 tag:
 - digital-агентство
 homepage: true
-thumbnail: assets/uploads/Волков-1400.jpg
+thumbnail: ../assets/uploads/Волков-1400.jpg
 
 ---
 ## Почему мы занялись контент-маркетингом

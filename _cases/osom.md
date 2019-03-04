@@ -9,7 +9,7 @@ company: ОСОМ Кофе
 tag:
 - Торговля
 homepage: false
-thumbnail: assets/uploads/thumb-case-3.jpg
+thumbnail: ../assets/uploads/thumb-case-3.jpg
 
 ---
 #### Продукт и целевая аудитория

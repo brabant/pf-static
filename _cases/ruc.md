@@ -7,7 +7,7 @@ company: Российский университет кооперации
 tag:
 - Наука
 homepage: false
-thumbnail: assets/uploads/thumb-case-2.jpg
+thumbnail: ../assets/uploads/thumb-case-2.jpg
 
 ---
 Итак, [Российский университет кооперации](http://www.ruc.su/), я — руководитель пресс-службы.
